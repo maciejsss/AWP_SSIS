@@ -1,0 +1,861 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/15/2022 6:54:37 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5H6628A"
+  DTS:CreatorName="DESKTOP-5H6628A\Maciej"
+  DTS:DTSID="{86552B11-3BEB-4F9D-9950-9CD4738EFDE4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Subcategories"
+  DTS:PackageType="5"
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{069FECA7-83FA-4040-B3C6-69968548BF4E}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_CategoriesCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{155BAC9D-4909-4566-90A9-F6E810797332}"
+      DTS:ObjectName="FFS_CategoriesCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Product_Categories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductCategoryKey"
+              DTS:DTSID="{D75ECD5F-3D94-4CEE-BA16-91230E1356D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryName"
+              DTS:DTSID="{8D4E9D7D-215B-46D2-8377-5FA358C5F96C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_CategoriesCSV 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{02B94199-16BB-4227-BB0B-317CB38BB426}"
+      DTS:ObjectName="FFS_CategoriesCSV 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Product_Categories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductCategoryKey"
+              DTS:DTSID="{B049F07A-E7C6-404C-A157-C0EF29FEE000}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryName"
+              DTS:DTSID="{A80EBCAA-7D92-45B4-A6D3-CF28B6AE1998}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_CustomersCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C0C27C0E-22C0-41EF-A90D-74B6BB67E2AF}"
+      DTS:ObjectName="FFS_CustomersCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Customers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerKey"
+              DTS:DTSID="{D4050436-FD17-4FDE-AE50-52382206FC5C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Prefix"
+              DTS:DTSID="{1FDD5BEA-A7C3-4198-B972-BD9E15B496AC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{DA534B76-84EE-43B5-A622-FE56F5C0D1EE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{F4FC7BAC-785D-4235-8FFE-9069B30BBCF4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BirthDate"
+              DTS:DTSID="{B72EAF93-54EF-4814-A4E8-283E70A287B0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MaritalStatus"
+              DTS:DTSID="{D86C1A8C-3AD6-483C-AA3A-018AD464F24F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{F3C1893F-88AF-439F-AF91-70896A296394}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="33"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmailAddress"
+              DTS:DTSID="{28BD3C87-B4B2-4E0D-9CA6-821D58378AD5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AnnualIncome"
+              DTS:DTSID="{1A7217DC-5182-41F3-845E-AD748C9D89C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalChildren"
+              DTS:DTSID="{A4735441-2235-4712-9C8B-8FDD1F3A7B04}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EducationLevel"
+              DTS:DTSID="{C426F0F0-6BDA-40B8-A8CA-93D84D0ED351}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="19"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Occupation"
+              DTS:DTSID="{520E9C7E-38DB-4382-9D59-214BD9A5082A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HomeOwner"
+              DTS:DTSID="{66063FEB-9E33-4C5A-9A57-A6E6FB444924}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_SubcategoriesCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{5D464C0F-EC3C-495D-9B17-0EB2E78CCCC5}"
+      DTS:ObjectName="FFS_SubcategoriesCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Product_Subcategories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductSubcategoryKey"
+              DTS:DTSID="{EF7ECA4B-7F8D-46FE-BADC-6C63B5A5E74B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SubcategoryName"
+              DTS:DTSID="{C37414F7-38FA-4ABE-994C-18890D6C86FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductCategoryKey"
+              DTS:DTSID="{7F7CDDB5-797E-4362-B9A9-3F12CE393B47}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A21307DC-853A-4C5A-94DB-8119319E17CB}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="vNoRows">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Subcategories"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{8C378D55-820B-4984-8B1C-AD332D57B05A}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Subcategories">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load Subcategories\DFT_LoadSubcategories"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{684311CB-12E1-4C59-BF27-C41A401FDA42}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_LoadSubcategories"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="1045"
+                  name="FFS_Subcategories"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[FFS_SubcategoriesCSV]"
+                      connectionManagerRefId="Package.ConnectionManagers[FFS_SubcategoriesCSV]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[ProductCategoryKey]"
+                          dataType="i1"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].ExternalColumns[ProductCategoryKey]"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[ProductCategoryKey]"
+                          name="ProductCategoryKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[ProductSubcategoryKey]"
+                          dataType="i1"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].ExternalColumns[ProductSubcategoryKey]"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[ProductSubcategoryKey]"
+                          name="ProductSubcategoryKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[SubcategoryName]"
+                          codePage="1250"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].ExternalColumns[SubcategoryName]"
+                          length="30"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[SubcategoryName]"
+                          name="SubcategoryName"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].ExternalColumns[ProductCategoryKey]"
+                          dataType="i1"
+                          name="ProductCategoryKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].ExternalColumns[ProductSubcategoryKey]"
+                          dataType="i1"
+                          name="ProductSubcategoryKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].ExternalColumns[SubcategoryName]"
+                          codePage="1250"
+                          dataType="str"
+                          length="30"
+                          name="SubcategoryName" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1250"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE_Subcategories"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[Subcategories]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Connections[OleDbConnection]"
+                      connectionManagerID="{4EF4E849-9B45-4CF7-A881-6C3E3877F028}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[AWP]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].Columns[ProductCategoryKey]"
+                          cachedDataType="i1"
+                          cachedName="ProductCategoryKey"
+                          externalMetadataColumnId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].ExternalColumns[ProductCategoryKey]"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[ProductCategoryKey]" />
+                        <inputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].Columns[ProductSubcategoryKey]"
+                          cachedDataType="i1"
+                          cachedName="ProductSubcategoryKey"
+                          externalMetadataColumnId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryKey]"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[ProductSubcategoryKey]" />
+                        <inputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].Columns[SubcategoryName]"
+                          cachedCodepage="1250"
+                          cachedDataType="str"
+                          cachedLength="30"
+                          cachedName="SubcategoryName"
+                          externalMetadataColumnId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].ExternalColumns[SubcategoryName]"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output].Columns[SubcategoryName]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].ExternalColumns[ProductCategoryKey]"
+                          dataType="i4"
+                          name="ProductCategoryKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryKey]"
+                          dataType="i4"
+                          name="ProductSubcategoryKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input].ExternalColumns[SubcategoryName]"
+                          codePage="1250"
+                          dataType="str"
+                          length="30"
+                          name="SubcategoryName" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Subcategories\DFT_LoadSubcategories\Row Count"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::vNoRows</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Load Subcategories\DFT_LoadSubcategories\Row Count.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Subcategories\DFT_LoadSubcategories\Row Count.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Load Subcategories\DFT_LoadSubcategories\Row Count.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load Subcategories\DFT_LoadSubcategories.Paths[Flat File Source Output]"
+                  endId="Package\Load Subcategories\DFT_LoadSubcategories\Row Count.Inputs[Row Count Input 1]"
+                  name="Flat File Source Output"
+                  startId="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories.Outputs[Flat File Source Output]" />
+                <path
+                  refId="Package\Load Subcategories\DFT_LoadSubcategories.Paths[Row Count Output 1]"
+                  endId="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Load Subcategories\DFT_LoadSubcategories\Row Count.Outputs[Row Count Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Subcategories\SQL_LogInsert"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{57C243BF-E0F6-4DAE-B254-A3D07F464379}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL_LogInsert"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{4EF4E849-9B45-4CF7-A881-6C3E3877F028}"
+              SQLTask:SqlStatementSource="INSERT INTO [dbo].[Logs]&#xA;           ([LoadDate]&#xA;           ,[Package]&#xA;           ,[NoRows])&#xA;     VALUES&#xA;           (GETDATE(),?,?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::vNoRows"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="131"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Subcategories\TRN_Subcategories"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{BC4CD4B1-7EA1-4AD4-AD88-0B2CDD15CD8C}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="TRN_Subcategories"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{4EF4E849-9B45-4CF7-A881-6C3E3877F028}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Subcategories" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Subcategories.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{8F0FCEAC-3677-404C-A245-207286285A47}"
+          DTS:From="Package\Load Subcategories\DFT_LoadSubcategories"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Load Subcategories\SQL_LogInsert" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Subcategories.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{AD273966-BD06-4B46-95A5-9189C01D2081}"
+          DTS:From="Package\Load Subcategories\TRN_Subcategories"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Load Subcategories\DFT_LoadSubcategories" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Load Subcategories\DFT_LoadSubcategories"
+          TopLeft="55,120" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Load Subcategories\SQL_LogInsert"
+          TopLeft="73,214" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Load Subcategories\TRN_Subcategories"
+          TopLeft="62,23" />
+        <EdgeLayout
+          Id="Package\Load Subcategories.PrecedenceConstraints[Constraint]"
+          TopLeft="149,162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Subcategories.PrecedenceConstraints[Constraint 1]"
+          TopLeft="149.25,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="280,311"
+          Size="280,354"
+          Id="Package\Load Subcategories"
+          TopLeft="99,85" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Subcategories\DFT_LoadSubcategories">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Load Subcategories\DFT_LoadSubcategories\Row Count"
+          TopLeft="214,211" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories"
+          TopLeft="196,347" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\Load Subcategories\DFT_LoadSubcategories\FFS_Subcategories"
+          TopLeft="200,77" />
+        <EdgeLayout
+          Id="Package\Load Subcategories\DFT_LoadSubcategories.Paths[Row Count Output 1]"
+          TopLeft="279.75,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,94"
+              Start="0,0"
+              End="0,86.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,86.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Subcategories\DFT_LoadSubcategories.Paths[Flat File Source Output]"
+          TopLeft="281.5,119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,92"
+              Start="0,0"
+              End="0,84.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,84.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Subcategories\DFT_LoadSubcategories\OLE_Subcategories">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

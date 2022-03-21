@@ -1,0 +1,1235 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/15/2022 6:54:37 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-5H6628A"
+  DTS:CreatorName="DESKTOP-5H6628A\Maciej"
+  DTS:DTSID="{9BDB9B0B-224D-492A-BAE4-08F9405559FD}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.150"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Products"
+  DTS:PackageType="5"
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{758A2F6E-5B64-4E4F-9019-17B2C534BD05}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{2F9C40AE-C7D6-4B8B-B8D2-5FDB82977FFB}"
+      DTS:ObjectName="Excel Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mswia\Desktop\AWProject\data\Products.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_CalendarCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{57E07608-5C57-4D71-9243-982412E64BF5}"
+      DTS:ObjectName="FFS_CalendarCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Calendar.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="7"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{9671CB40-701D-45D5-A935-49B46E5536FC}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_CategoriesCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EE4F509D-AE2E-4F47-B283-CD68F1A6664A}"
+      DTS:ObjectName="FFS_CategoriesCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Product_Categories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductCategoryKey"
+              DTS:DTSID="{083C6B27-1A33-4060-9D7D-B779570EFFBE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryName"
+              DTS:DTSID="{DC306EEA-D6FD-4EF2-BA1C-D813EFED7FA0}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_CategoriesCSV 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EED58E37-C4ED-4B81-8C9A-0904C3B785ED}"
+      DTS:ObjectName="FFS_CategoriesCSV 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Product_Categories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductCategoryKey"
+              DTS:DTSID="{CA32819D-4E6D-4808-9A01-6A3CF5DF9D03}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CategoryName"
+              DTS:DTSID="{04DD26BD-BF6D-4030-BC65-970589D9FC16}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_CustomersCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{E5518EFE-7F73-487E-81EA-7E8DF0690B6B}"
+      DTS:ObjectName="FFS_CustomersCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Customers.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CustomerKey"
+              DTS:DTSID="{C8FE8E7C-F346-423F-B1DD-A48A8BF8B10F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="4"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Prefix"
+              DTS:DTSID="{0F710C8F-D3A5-48B1-B090-21F6649AED4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FirstName"
+              DTS:DTSID="{8CB5BC79-CE76-405A-B040-020EC1873E25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="16"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LastName"
+              DTS:DTSID="{C7179885-FA4C-46C2-AEAF-5A1B7763224D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="BirthDate"
+              DTS:DTSID="{9AB13D82-127E-4C4C-A923-7C6A7577BE58}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MaritalStatus"
+              DTS:DTSID="{61AB481B-C07A-4AD8-8640-CA8B05DF8EDF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="2"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Gender"
+              DTS:DTSID="{D252D2E3-8356-43D9-8A21-D1D63F737A55}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="33"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EmailAddress"
+              DTS:DTSID="{A2F4B386-1DF9-41BF-BDED-1013B0193826}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AnnualIncome"
+              DTS:DTSID="{7CD4ADE8-590E-40DB-9AF6-DC5F581768F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="5"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TotalChildren"
+              DTS:DTSID="{3D439070-070C-4E83-9A8C-E117A8840563}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EducationLevel"
+              DTS:DTSID="{EF0CDA23-0482-40C3-B7E3-7B7645F7B81C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="19"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Occupation"
+              DTS:DTSID="{ECAAF130-F455-474F-B72B-6CD8DFE9B2DD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="HomeOwner"
+              DTS:DTSID="{F9E66D0F-6572-49E5-B37D-98E7AA4BE236}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_SubcategoriesCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DF0D6F25-0235-4D68-8432-334A31A4FDB5}"
+      DTS:ObjectName="FFS_SubcategoriesCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Product_Subcategories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductSubcategoryKey"
+              DTS:DTSID="{2CA29A68-67E9-4A8B-BFA7-8780AA5781B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="30"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SubcategoryName"
+              DTS:DTSID="{4C3A293E-77D9-41EC-ADFB-2B0B0B27D6B3}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ProductCategoryKey"
+              DTS:DTSID="{5C2DC725-732E-4F1B-8EC9-138BD328F12E}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FFS_Territories]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{81C001BE-2B18-4653-A0E4-27067295C017}"
+      DTS:ObjectName="FFS_Territories">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Territories.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SalesTerritoryKey"
+              DTS:DTSID="{C5F7D633-0669-4B89-A7EB-3334A7584B66}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Region"
+              DTS:DTSID="{076B0384-1F9D-4082-83FB-9BA6F8EBF7B1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="14"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Country"
+              DTS:DTSID="{0D983DA8-9225-4FF2-9FEC-7B5F6753EE35}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="13"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Continent"
+              DTS:DTSID="{B86A1A9A-9C36-453D-918E-D12294F5DB58}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{BAFC7440-91B6-4ECC-BAD9-5BEF4F958BD2}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="vNoRows">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load Products"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{7C87C1BF-2F65-4A89-9FDA-811B80398EB8}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load Products">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Load Products\DFT_LoadProducts"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{038DAC56-BFC6-4984-AF73-C4A9971284C5}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="DFT_LoadProducts"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Load Products\DFT_LoadProducts\OLE_Products"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE_Products"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[OLE_Products]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1250</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Connections[OleDbConnection]"
+                      connectionManagerID="{4EF4E849-9B45-4CF7-A881-6C3E3877F028}:external"
+                      connectionManagerRefId="Project.ConnectionManagers[AWP]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductKey]"
+                          cachedDataType="r8"
+                          cachedName="ProductKey"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductKey]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductKey]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductSubcategoryKey]"
+                          cachedDataType="r8"
+                          cachedName="ProductSubcategoryKey"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryKey]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSubcategoryKey]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductSKU]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ProductSKU"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductSKU]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSKU]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ProductName"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductName]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ModelName]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ModelName"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ModelName]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ModelName]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductDescription]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ProductDescription"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductDescription]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductDescription]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductColor]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ProductColor"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductColor]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductColor]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductSize]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ProductSize"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductSize]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSize]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductStyle]"
+                          cachedDataType="wstr"
+                          cachedLength="255"
+                          cachedName="ProductStyle"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductStyle]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductStyle]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductCost]"
+                          cachedDataType="r8"
+                          cachedName="ProductCost"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductCost]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductCost]" />
+                        <inputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].Columns[ProductPrice]"
+                          cachedDataType="r8"
+                          cachedName="ProductPrice"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductPrice]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductPrice]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductKey]"
+                          dataType="i4"
+                          name="ProductKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductSubcategoryKey]"
+                          dataType="i4"
+                          name="ProductSubcategoryKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductSKU]"
+                          dataType="wstr"
+                          length="50"
+                          name="ProductSKU" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
+                          dataType="wstr"
+                          length="50"
+                          name="ProductName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ModelName]"
+                          dataType="wstr"
+                          length="50"
+                          name="ModelName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductDescription]"
+                          dataType="wstr"
+                          length="250"
+                          name="ProductDescription" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductColor]"
+                          dataType="wstr"
+                          length="50"
+                          name="ProductColor" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductSize]"
+                          dataType="wstr"
+                          length="50"
+                          name="ProductSize" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductStyle]"
+                          dataType="wstr"
+                          length="50"
+                          name="ProductStyle" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductCost]"
+                          dataType="r8"
+                          name="ProductCost" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductPrice]"
+                          dataType="r8"
+                          name="ProductPrice" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Products\DFT_LoadProducts\OLE_Products.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Products\DFT_LoadProducts\OLE_Products.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Products\DFT_LoadProducts\Row Count"
+                  componentClassID="Microsoft.RowCount"
+                  contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+                  name="Row Count">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable to hold the row count."
+                      name="VariableName">User::vNoRows</property>
+                  </properties>
+                  <inputs>
+                    <input
+                      refId="Package\Load Products\DFT_LoadProducts\Row Count.Inputs[Row Count Input 1]"
+                      hasSideEffects="true"
+                      name="Row Count Input 1">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Load Products\DFT_LoadProducts\Row Count.Outputs[Row Count Output 1]"
+                      name="Row Count Output 1"
+                      synchronousInputId="Package\Load Products\DFT_LoadProducts\Row Count.Inputs[Row Count Input 1]">
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Load Products\DFT_LoadProducts\XLS_Products"
+                  componentClassID="Microsoft.ExcelSource"
+                  contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Excel Source"
+                  name="XLS_Products"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">Arkusz1$</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                    <property
+                      dataType="System.String"
+                      description="The variable that contains the SQL command to be executed."
+                      name="SqlCommandVariable"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">0</property>
+                    <property
+                      dataType="System.String"
+                      description="The mapping from parameters in the SQL command to variables."
+                      name="ParameterMapping"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output]"
+                      name="Excel Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductKey]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductKey]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductKey]"
+                          name="ProductKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSubcategoryKey]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductSubcategoryKey]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSubcategoryKey]"
+                          name="ProductSubcategoryKey"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSKU]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductSKU]"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSKU]"
+                          name="ProductSKU"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductName]"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductName]"
+                          name="ProductName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ModelName]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ModelName]"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ModelName]"
+                          name="ModelName"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductDescription]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductDescription]"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductDescription]"
+                          name="ProductDescription"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductColor]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductColor]"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductColor]"
+                          name="ProductColor"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSize]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductSize]"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductSize]"
+                          name="ProductSize"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductStyle]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductStyle]"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductStyle]"
+                          name="ProductStyle"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductCost]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductCost]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductCost]"
+                          name="ProductCost"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductPrice]"
+                          dataType="r8"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductPrice]"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].Columns[ProductPrice]"
+                          name="ProductPrice"
+                          truncationRowDisposition="FailComponent" />
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductKey]"
+                          dataType="r8"
+                          name="ProductKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductSubcategoryKey]"
+                          dataType="r8"
+                          name="ProductSubcategoryKey" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductSKU]"
+                          dataType="wstr"
+                          length="255"
+                          name="ProductSKU" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductName]"
+                          dataType="wstr"
+                          length="255"
+                          name="ProductName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ModelName]"
+                          dataType="wstr"
+                          length="255"
+                          name="ModelName" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductDescription]"
+                          dataType="wstr"
+                          length="255"
+                          name="ProductDescription" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductColor]"
+                          dataType="wstr"
+                          length="255"
+                          name="ProductColor" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductSize]"
+                          dataType="wstr"
+                          length="255"
+                          name="ProductSize" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductStyle]"
+                          dataType="wstr"
+                          length="255"
+                          name="ProductStyle" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductCost]"
+                          dataType="r8"
+                          name="ProductCost" />
+                        <externalMetadataColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output].ExternalColumns[ProductPrice]"
+                          dataType="r8"
+                          name="ProductPrice" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output]"
+                      isErrorOut="true"
+                      name="Excel Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductKey]"
+                          dataType="r8"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductKey]"
+                          name="ProductKey" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductSubcategoryKey]"
+                          dataType="r8"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductSubcategoryKey]"
+                          name="ProductSubcategoryKey" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductSKU]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductSKU]"
+                          name="ProductSKU" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductName]"
+                          name="ProductName" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ModelName]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ModelName]"
+                          name="ModelName" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductDescription]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductDescription]"
+                          name="ProductDescription" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductColor]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductColor]"
+                          name="ProductColor" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductSize]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductSize]"
+                          name="ProductSize" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductStyle]"
+                          dataType="wstr"
+                          length="255"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductStyle]"
+                          name="ProductStyle" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductCost]"
+                          dataType="r8"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductCost]"
+                          name="ProductCost" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductPrice]"
+                          dataType="r8"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ProductPrice]"
+                          name="ProductPrice" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\Load Products\DFT_LoadProducts.Paths[Excel Source Output]"
+                  endId="Package\Load Products\DFT_LoadProducts\Row Count.Inputs[Row Count Input 1]"
+                  name="Excel Source Output"
+                  startId="Package\Load Products\DFT_LoadProducts\XLS_Products.Outputs[Excel Source Output]" />
+                <path
+                  refId="Package\Load Products\DFT_LoadProducts.Paths[Row Count Output 1]"
+                  endId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input]"
+                  name="Row Count Output 1"
+                  startId="Package\Load Products\DFT_LoadProducts\Row Count.Outputs[Row Count Output 1]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Products\SQL_LogInsert"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{A8A09270-CD2D-4167-8FFD-2FBACCFCDE85}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SQL_LogInsert"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{4EF4E849-9B45-4CF7-A881-6C3E3877F028}"
+              SQLTask:SqlStatementSource="INSERT INTO [dbo].[Logs]&#xA;           ([LoadDate]&#xA;           ,[Package]&#xA;           ,[NoRows])&#xA;     VALUES&#xA;           (GETDATE(),?,?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="1"
+                SQLTask:DtsVariableName="User::vNoRows"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="131"
+                SQLTask:ParameterSize="-1" />
+              <SQLTask:ParameterBinding
+                SQLTask:ParameterName="0"
+                SQLTask:DtsVariableName="System::PackageName"
+                SQLTask:ParameterDirection="Input"
+                SQLTask:DataType="130"
+                SQLTask:ParameterSize="-1" />
+            </SQLTask:SqlTaskData>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Load Products\TRN_Products"
+          DTS:CreationName="Microsoft.ExecuteSQLTask"
+          DTS:Description="Execute SQL Task"
+          DTS:DTSID="{55F8D369-13DB-4D55-886C-311AB63E9079}"
+          DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="TRN_Products"
+          DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+          DTS:ThreadHint="0">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <SQLTask:SqlTaskData
+              SQLTask:Connection="{4EF4E849-9B45-4CF7-A881-6C3E3877F028}"
+              SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Calendar" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Products.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{294F52FD-266A-460B-8875-7D6E18EFFBAA}"
+          DTS:From="Package\Load Products\DFT_LoadProducts"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Load Products\SQL_LogInsert" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Load Products.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{5B946939-FDD5-4E1F-83BF-945AB16646D8}"
+          DTS:From="Package\Load Products\TRN_Products"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Load Products\DFT_LoadProducts" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Load Products\DFT_LoadProducts"
+          TopLeft="55,120" />
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Load Products\SQL_LogInsert"
+          TopLeft="60,219" />
+        <NodeLayout
+          Size="145,42"
+          Id="Package\Load Products\TRN_Products"
+          TopLeft="69,23" />
+        <EdgeLayout
+          Id="Package\Load Products.PrecedenceConstraints[Constraint]"
+          TopLeft="136.25,162">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,57"
+              Start="0,0"
+              End="0,49.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Products.PrecedenceConstraints[Constraint 1]"
+          TopLeft="140,65">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,55"
+              Start="0,0"
+              End="0,47.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="280,311"
+          Size="280,354"
+          Id="Package\Load Products"
+          TopLeft="140,76" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load Products\DFT_LoadProducts">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Load Products\DFT_LoadProducts\Row Count"
+          TopLeft="214,211" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Load Products\DFT_LoadProducts\XLS_Products"
+          TopLeft="221,101" />
+        <EdgeLayout
+          Id="Package\Load Products\DFT_LoadProducts.Paths[Excel Source Output]"
+          TopLeft="292.5,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5,68"
+              Start="0,0"
+              End="-13.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="-4,34" />
+                  <mssgle:LineSegment
+                    End="-9.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5,34"
+                    Point2="-13.5,34"
+                    Point3="-13.5,38" />
+                  <mssgle:LineSegment
+                    End="-13.5,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="144,42"
+          Id="Package\Load Products\DFT_LoadProducts\OLE_Products"
+          TopLeft="187,369" />
+        <EdgeLayout
+          Id="Package\Load Products\DFT_LoadProducts.Paths[Row Count Output 1]"
+          TopLeft="279,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-20,116"
+              Start="0,0"
+              End="-20,108.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,54" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,54"
+                    Point2="0,58"
+                    Point3="-4,58" />
+                  <mssgle:LineSegment
+                    End="-16,58" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-16,58"
+                    Point2="-20,58"
+                    Point3="-20,62" />
+                  <mssgle:LineSegment
+                    End="-20,108.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Products\DFT_LoadProducts\XLS_Products">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load Products\DFT_LoadProducts\OLE_Products">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
