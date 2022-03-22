@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Products"
   DTS:PackageType="5"
-  DTS:VersionBuild="29"
-  DTS:VersionGUID="{758A2F6E-5B64-4E4F-9019-17B2C534BD05}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{FBB8B7C6-142D-4EEF-8322-E5202D609962}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -23,7 +23,7 @@
       DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mswia\Desktop\AWProject\data\Products.xls;Extended Properties=&quot;Excel 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\mswia\Desktop\AWProject\data\Products.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -416,7 +416,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[OLE_Products]</property>
+                      name="OpenRowset">[Products]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -574,7 +574,7 @@
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductDescription]"
                           dataType="wstr"
-                          length="250"
+                          length="255"
                           name="ProductDescription" />
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductColor]"
@@ -1130,40 +1130,6 @@
           Size="143,42"
           Id="Package\Load Products\DFT_LoadProducts\XLS_Products"
           TopLeft="221,101" />
-        <EdgeLayout
-          Id="Package\Load Products\DFT_LoadProducts.Paths[Excel Source Output]"
-          TopLeft="292.5,143">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-13.5,68"
-              Start="0,0"
-              End="-13.5,60.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30"
-                    Point2="0,34"
-                    Point3="-4,34" />
-                  <mssgle:LineSegment
-                    End="-9.5,34" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.5,34"
-                    Point2="-13.5,34"
-                    Point3="-13.5,38" />
-                  <mssgle:LineSegment
-                    End="-13.5,60.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="144,42"
           Id="Package\Load Products\DFT_LoadProducts\OLE_Products"
@@ -1194,6 +1160,40 @@
                     Point3="-20,62" />
                   <mssgle:LineSegment
                     End="-20,108.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Products\DFT_LoadProducts.Paths[Excel Source Output]"
+          TopLeft="292.5,143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-13.5,68"
+              Start="0,0"
+              End="-13.5,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30"
+                    Point2="0,34"
+                    Point3="-4,34" />
+                  <mssgle:LineSegment
+                    End="-9.5,34" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-9.5,34"
+                    Point2="-13.5,34"
+                    Point3="-13.5,38" />
+                  <mssgle:LineSegment
+                    End="-13.5,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

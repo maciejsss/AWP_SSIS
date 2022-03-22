@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-5H6628A"
   DTS:CreatorName="DESKTOP-5H6628A\Maciej"
-  DTS:DTSID="{05894132-48A6-4991-99B6-A1467EA14650}"
+  DTS:DTSID="{CF30A402-4AC8-46C1-B838-B91B42B32812}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1045"
-  DTS:ObjectName="Teritorries"
+  DTS:ObjectName="Territories"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{F0CABED9-90C8-4FDB-8290-508E3AA55FC5}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{28033139-3FF0-4076-9994-C83C3BB84F27}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
