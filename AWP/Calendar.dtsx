@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Calendar"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{4547E04E-A315-40EF-A404-68AD4E44AC6B}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{95AA31E3-2944-4ED7-B880-628951112DE0}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -391,20 +391,20 @@
               version="1">
               <components>
                 <component
-                  refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column"
+                  refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts"
                   componentClassID="Microsoft.DerivedColumn"
                   contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
                   description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-                  name="Derived Column"
+                  name="DRV_AddDateparts"
                   usesDispositions="true">
                   <inputs>
                     <input
-                      refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Inputs[Derived Column Input]"
+                      refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Inputs[Derived Column Input]"
                       description="Input to the Derived Column Transformation"
                       name="Derived Column Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Inputs[Derived Column Input].Columns[Date]"
+                          refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Inputs[Derived Column Input].Columns[Date]"
                           cachedDataType="date"
                           cachedName="Date"
                           lineageId="Package\Load Calendar\DFT_LoadCalendar\FFS_Calendar.Outputs[Flat File Source Output].Columns[Date]" />
@@ -414,18 +414,18 @@
                   </inputs>
                   <outputs>
                     <output
-                      refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output]"
+                      refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output]"
                       description="Default Output of the Derived Column Transformation"
                       exclusionGroup="1"
                       name="Derived Column Output"
-                      synchronousInputId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Inputs[Derived Column Input]">
+                      synchronousInputId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Inputs[Derived Column Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Day]"
+                          refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Day]"
                           dataType="i4"
                           errorOrTruncationOperation="Computation"
                           errorRowDisposition="FailComponent"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Day]"
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Day]"
                           name="Day"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -443,11 +443,11 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Month]"
+                          refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Month]"
                           dataType="i4"
                           errorOrTruncationOperation="Computation"
                           errorRowDisposition="FailComponent"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Month]"
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Month]"
                           name="Month"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -465,11 +465,11 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Year]"
+                          refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Year]"
                           dataType="i4"
                           errorOrTruncationOperation="Computation"
                           errorRowDisposition="FailComponent"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Year]"
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Year]"
                           name="Year"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -487,11 +487,11 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Quarter]"
+                          refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Quarter]"
                           dataType="i4"
                           errorOrTruncationOperation="Computation"
                           errorRowDisposition="FailComponent"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Quarter]"
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Quarter]"
                           name="Quarter"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -509,11 +509,11 @@
                           </properties>
                         </outputColumn>
                         <outputColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Weekday]"
+                          refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Weekday]"
                           dataType="i4"
                           errorOrTruncationOperation="Computation"
                           errorRowDisposition="FailComponent"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Weekday]"
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Weekday]"
                           name="Weekday"
                           truncationRowDisposition="FailComponent">
                           <properties>
@@ -534,23 +534,23 @@
                       <externalMetadataColumns />
                     </output>
                     <output
-                      refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Error Output]"
+                      refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Error Output]"
                       description="Error Output of the Derived Column Transformation"
                       exclusionGroup="1"
                       isErrorOut="true"
                       name="Derived Column Error Output"
-                      synchronousInputId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Inputs[Derived Column Input]">
+                      synchronousInputId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Inputs[Derived Column Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                           dataType="i4"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                           name="ErrorCode"
                           specialFlags="1" />
                         <outputColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          refId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                           dataType="i4"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -730,31 +730,31 @@
                           cachedDataType="i4"
                           cachedName="Day"
                           externalMetadataColumnId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Day]" />
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Day]" />
                         <inputColumn
                           refId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].Columns[Month]"
                           cachedDataType="i4"
                           cachedName="Month"
                           externalMetadataColumnId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Month]" />
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Month]" />
                         <inputColumn
                           refId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].Columns[Year]"
                           cachedDataType="i4"
                           cachedName="Year"
                           externalMetadataColumnId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Year]" />
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Year]" />
                         <inputColumn
                           refId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].Columns[Quarter]"
                           cachedDataType="i4"
                           cachedName="Quarter"
                           externalMetadataColumnId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Quarter]" />
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Quarter]" />
                         <inputColumn
                           refId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].Columns[Weekday]"
                           cachedDataType="i4"
                           cachedName="Weekday"
                           externalMetadataColumnId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
-                          lineageId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output].Columns[Weekday]" />
+                          lineageId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output].Columns[Weekday]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -849,7 +849,7 @@
                   refId="Package\Load Calendar\DFT_LoadCalendar.Paths[Derived Column Output]"
                   endId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input]"
                   name="Derived Column Output"
-                  startId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Outputs[Derived Column Output]" />
+                  startId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Outputs[Derived Column Output]" />
                 <path
                   refId="Package\Load Calendar\DFT_LoadCalendar.Paths[Flat File Source Output]"
                   endId="Package\Load Calendar\DFT_LoadCalendar\Row Count.Inputs[Row Count Input 1]"
@@ -857,7 +857,7 @@
                   startId="Package\Load Calendar\DFT_LoadCalendar\FFS_Calendar.Outputs[Flat File Source Output]" />
                 <path
                   refId="Package\Load Calendar\DFT_LoadCalendar.Paths[Row Count Output 1]"
-                  endId="Package\Load Calendar\DFT_LoadCalendar\Derived Column.Inputs[Derived Column Input]"
+                  endId="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts.Inputs[Derived Column Input]"
                   name="Row Count Output 1"
                   startId="Package\Load Calendar\DFT_LoadCalendar\Row Count.Outputs[Row Count Output 1]" />
               </paths>
@@ -1024,8 +1024,8 @@
           Id="Package\Load Calendar\DFT_LoadCalendar\FFS_Calendar"
           TopLeft="200,77" />
         <NodeLayout
-          Size="154,42"
-          Id="Package\Load Calendar\DFT_LoadCalendar\Derived Column"
+          Size="169,42"
+          Id="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts"
           TopLeft="204,331" />
         <NodeLayout
           Size="145,42"
@@ -1033,18 +1033,30 @@
           TopLeft="207,462" />
         <EdgeLayout
           Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Row Count Output 1]"
-          TopLeft="280,253">
+          TopLeft="279,253">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78"
+              EndConnector="9.5,78"
               Start="0,0"
-              End="0,70.5">
+              End="9.5,70.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.5" />
+                    End="0,35" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,35"
+                    Point2="0,39"
+                    Point3="4,39" />
+                  <mssgle:LineSegment
+                    End="5.5,39" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.5,39"
+                    Point2="9.5,39"
+                    Point3="9.5,43" />
+                  <mssgle:LineSegment
+                    End="9.5,70.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1077,18 +1089,30 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Derived Column Output]"
-          TopLeft="280.25,373">
+          TopLeft="288.5,373">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,89"
+              EndConnector="-9,89"
               Start="0,0"
-              End="0,81.5">
+              End="-9,81.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,81.5" />
+                    End="0,40.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,40.5"
+                    Point2="0,44.5"
+                    Point3="-4,44.5" />
+                  <mssgle:LineSegment
+                    End="-5,44.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-5,44.5"
+                    Point2="-9,44.5"
+                    Point3="-9,48.5" />
+                  <mssgle:LineSegment
+                    End="-9,81.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
