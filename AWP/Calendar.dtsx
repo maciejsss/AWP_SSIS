@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Calendar"
   DTS:PackageType="5"
-  DTS:VersionBuild="33"
-  DTS:VersionGUID="{95AA31E3-2944-4ED7-B880-628951112DE0}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{08595117-802B-4AE7-B80C-CAA2640178BF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -76,43 +76,6 @@
               DTS:TextQualified="True"
               DTS:ObjectName="CategoryName"
               DTS:DTSID="{93FCFE0A-3142-4DD0-B462-BA5BFC16ED33}"
-              DTS:CreationName="" />
-          </DTS:FlatFileColumns>
-        </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[FFS_CategoriesCSV 1]"
-      DTS:CreationName="FLATFILE"
-      DTS:DTSID="{D5596E2F-319E-4EE0-A3E1-34AD27F1A2F5}"
-      DTS:ObjectName="FFS_CategoriesCSV 1">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:Format="Delimited"
-          DTS:LocaleID="1045"
-          DTS:HeaderRowDelimiter="_x000D__x000A_"
-          DTS:ColumnNamesInFirstDataRow="True"
-          DTS:RowDelimiter=""
-          DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1250"
-          DTS:ConnectionString="C:\Users\mswia\Desktop\AWProject\data\AdventureWorks_Product_Categories.csv">
-          <DTS:FlatFileColumns>
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="16"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ProductCategoryKey"
-              DTS:DTSID="{7E84582F-B812-432B-871B-ACC9A76D25B8}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000D__x000A_"
-              DTS:MaximumWidth="11"
-              DTS:DataType="129"
-              DTS:TextQualified="True"
-              DTS:ObjectName="CategoryName"
-              DTS:DTSID="{D476E17C-5DF8-4C0C-959F-A03C7BEB64F1}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -320,7 +283,7 @@
               DTS:DataType="16"
               DTS:TextQualified="True"
               DTS:ObjectName="SalesTerritoryKey"
-              DTS:DTSID="{01C5BB76-A864-4FF9-ACE9-CAEFCD5646CA}"
+              DTS:DTSID="{0924411A-69F5-418F-8785-266DFE02CFD7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -329,7 +292,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Region"
-              DTS:DTSID="{939DD323-33B5-4BE5-BC7B-CC87242F55BD}"
+              DTS:DTSID="{3168EA5D-716A-48CB-988D-299F24995B9E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -338,7 +301,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{1EB20D83-71D2-4E25-BAA7-CFA7B91EF0E2}"
+              DTS:DTSID="{41526956-DAAA-4D92-824C-01726D77E794}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -347,7 +310,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Continent"
-              DTS:DTSID="{D1392B07-7ACD-4B59-A885-89D495700DC1}"
+              DTS:DTSID="{BAE651C9-5BA4-4EFD-BD0B-C8B9BF50759E}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -1016,103 +979,79 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="130,42"
-          Id="Package\Load Calendar\DFT_LoadCalendar\Row Count"
-          TopLeft="214,211" />
-        <NodeLayout
           Size="143,42"
           Id="Package\Load Calendar\DFT_LoadCalendar\FFS_Calendar"
-          TopLeft="200,77" />
+          TopLeft="108,65" />
         <NodeLayout
           Size="169,42"
           Id="Package\Load Calendar\DFT_LoadCalendar\DRV_AddDateparts"
-          TopLeft="204,331" />
+          TopLeft="102,256" />
         <NodeLayout
           Size="145,42"
           Id="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar"
-          TopLeft="207,462" />
-        <EdgeLayout
-          Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Row Count Output 1]"
-          TopLeft="279,253">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="9.5,78"
-              Start="0,0"
-              End="9.5,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35"
-                    Point2="0,39"
-                    Point3="4,39" />
-                  <mssgle:LineSegment
-                    End="5.5,39" />
-                  <mssgle:CubicBezierSegment
-                    Point1="5.5,39"
-                    Point2="9.5,39"
-                    Point3="9.5,43" />
-                  <mssgle:LineSegment
-                    End="9.5,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Flat File Source Output]"
-          TopLeft="275.25,119">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,92"
-              Start="0,0"
-              End="0,84.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,84.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="112,360" />
         <EdgeLayout
           Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Derived Column Output]"
-          TopLeft="288.5,373">
+          TopLeft="185.5,298">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-9,89"
+              EndConnector="0,62"
               Start="0,0"
-              End="-9,81.5">
+              End="0,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,40.5"
-                    Point2="0,44.5"
-                    Point3="-4,44.5" />
+                    End="0,54.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Load Calendar\DFT_LoadCalendar\Row Count"
+          TopLeft="121,175" />
+        <EdgeLayout
+          Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Flat File Source Output]"
+          TopLeft="182.75,107">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,68"
+              Start="0,0"
+              End="0,60.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-5,44.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-5,44.5"
-                    Point2="-9,44.5"
-                    Point3="-9,48.5" />
+                    End="0,60.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Row Count Output 1]"
+          TopLeft="186.25,217">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39"
+              Start="0,0"
+              End="0,31.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-9,81.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

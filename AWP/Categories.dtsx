@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Categories"
   DTS:PackageType="5"
-  DTS:VersionBuild="23"
-  DTS:VersionGUID="{CDC2E12F-33DF-4642-A108-1D8AFE204EA8}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{7AA808E5-4BA0-4CFF-A9BA-63103C908544}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -750,7 +750,7 @@
         <NodeLayout
           Size="153,42"
           Id="Package\Load Categories\DFT_LoadCategories\OLE_Categories"
-          TopLeft="175,334" />
+          TopLeft="200,335" />
         <NodeLayout
           Size="151,42"
           Id="Package\Load Categories\DFT_LoadCategories\FFS_Categories"
@@ -759,6 +759,28 @@
           Size="130,42"
           Id="Package\Load Categories\DFT_LoadCategories\Row Count"
           TopLeft="214,211" />
+        <EdgeLayout
+          Id="Package\Load Categories\DFT_LoadCategories.Paths[Row Count Output 1]"
+          TopLeft="277.75,253">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,82"
+              Start="0,0"
+              End="0,74.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,74.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Categories\DFT_LoadCategories.Paths[Flat File Source Output]"
           TopLeft="277.25,119">
@@ -773,40 +795,6 @@
                   Capacity="5">
                   <mssgle:LineSegment
                     End="0,84.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Load Categories\DFT_LoadCategories.Paths[Row Count Output 1]"
-          TopLeft="279,253">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-27.5,81"
-              Start="0,0"
-              End="-27.5,73.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36.5"
-                    Point2="0,40.5"
-                    Point3="-4,40.5" />
-                  <mssgle:LineSegment
-                    End="-23.5,40.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-23.5,40.5"
-                    Point2="-27.5,40.5"
-                    Point3="-27.5,44.5" />
-                  <mssgle:LineSegment
-                    End="-27.5,73.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

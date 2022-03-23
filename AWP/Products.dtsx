@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Products"
   DTS:PackageType="5"
-  DTS:VersionBuild="31"
-  DTS:VersionGUID="{FBB8B7C6-142D-4EEF-8322-E5202D609962}">
+  DTS:VersionBuild="32"
+  DTS:VersionGUID="{BDC36FE1-349F-47D9-9499-DA593F92513F}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1125,7 +1125,7 @@
         <NodeLayout
           Size="130,42"
           Id="Package\Load Products\DFT_LoadProducts\Row Count"
-          TopLeft="214,211" />
+          TopLeft="227,211" />
         <NodeLayout
           Size="143,42"
           Id="Package\Load Products\DFT_LoadProducts\XLS_Products"
@@ -1133,33 +1133,21 @@
         <NodeLayout
           Size="144,42"
           Id="Package\Load Products\DFT_LoadProducts\OLE_Products"
-          TopLeft="187,369" />
+          TopLeft="214,334" />
         <EdgeLayout
           Id="Package\Load Products\DFT_LoadProducts.Paths[Row Count Output 1]"
-          TopLeft="279,253">
+          TopLeft="289,253">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-20,116"
+              EndConnector="0,81"
               Start="0,0"
-              End="-20,108.5">
+              End="0,73.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,54"
-                    Point2="0,58"
-                    Point3="-4,58" />
-                  <mssgle:LineSegment
-                    End="-16,58" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16,58"
-                    Point2="-20,58"
-                    Point3="-20,62" />
-                  <mssgle:LineSegment
-                    End="-20,108.5" />
+                    End="0,73.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1170,30 +1158,18 @@
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Load Products\DFT_LoadProducts.Paths[Excel Source Output]"
-          TopLeft="292.5,143">
+          TopLeft="292.25,143">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-13.5,68"
+              EndConnector="0,68"
               Start="0,0"
-              End="-13.5,60.5">
+              End="0,60.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,30" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30"
-                    Point2="0,34"
-                    Point3="-4,34" />
-                  <mssgle:LineSegment
-                    End="-9.5,34" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.5,34"
-                    Point2="-13.5,34"
-                    Point3="-13.5,38" />
-                  <mssgle:LineSegment
-                    End="-13.5,60.5" />
+                    End="0,60.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

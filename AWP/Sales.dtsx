@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Sales"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{D77BA68A-3B78-4CDA-A114-8B71C5D422A0}">
+  DTS:VersionBuild="26"
+  DTS:VersionGUID="{D3A508AB-3DAE-4E8D-A573-925BD8BB4A0C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -2092,37 +2092,25 @@
         <NodeLayout
           Size="148,42"
           Id="Package\Load Sales\SQL_LogInsert"
-          TopLeft="73,214" />
+          TopLeft="61,217" />
         <NodeLayout
           Size="129,42"
           Id="Package\Load Sales\TRN_Sales"
           TopLeft="69,23" />
         <EdgeLayout
           Id="Package\Load Sales.PrecedenceConstraints[Constraint]"
-          TopLeft="130.5,162">
+          TopLeft="132.75,162">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="16.5,52"
+              EndConnector="0,55"
               Start="0,0"
-              End="16.5,44.5">
+              End="0,47.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,22"
-                    Point2="0,26"
-                    Point3="4,26" />
-                  <mssgle:LineSegment
-                    End="12.5,26" />
-                  <mssgle:CubicBezierSegment
-                    Point1="12.5,26"
-                    Point2="16.5,26"
-                    Point3="16.5,30" />
-                  <mssgle:LineSegment
-                    End="16.5,44.5" />
+                    End="0,47.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2170,76 +2158,28 @@
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="155,42"
-          Id="Package\Load Sales\DFT_LoadSales\FFS_Sales_2015"
-          TopLeft="29,77" />
+          Id="Package\Load Sales\DFT_LoadSales\FFS_Sales_2017"
+          TopLeft="458,79" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Load Sales\DFT_LoadSales\Union All"
+          TopLeft="249,197" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Load Sales\DFT_LoadSales\FFS_Sales_2016"
+          TopLeft="238,77" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\Load Sales\DFT_LoadSales\OLE_Sales"
+          TopLeft="249,374" />
         <NodeLayout
           Size="130,42"
           Id="Package\Load Sales\DFT_LoadSales\Row Count"
           TopLeft="249,296" />
         <NodeLayout
-          Size="128,42"
-          Id="Package\Load Sales\DFT_LoadSales\OLE_Sales"
-          TopLeft="249,374" />
-        <EdgeLayout
-          Id="Package\Load Sales\DFT_LoadSales.Paths[Row Count Output 1]"
-          TopLeft="313.5,338">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,36"
-              Start="0,0"
-              End="0,28.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
-          Id="Package\Load Sales\DFT_LoadSales\Union All"
-          TopLeft="249,197" />
-        <EdgeLayout
-          Id="Package\Load Sales\DFT_LoadSales.Paths[Flat File Source Output]"
-          TopLeft="106.5,119">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="174.75,78"
-              Start="0,0"
-              End="174.75,70.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.8787061994609" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.8787061994609"
-                    Point2="0,50.8787061994609"
-                    Point3="4,50.8787061994609" />
-                  <mssgle:LineSegment
-                    End="170.75,50.8787061994609" />
-                  <mssgle:CubicBezierSegment
-                    Point1="170.75,50.8787061994609"
-                    Point2="174.75,50.8787061994609"
-                    Point3="174.75,54.8787061994609" />
-                  <mssgle:LineSegment
-                    End="174.75,70.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          Size="155,42"
+          Id="Package\Load Sales\DFT_LoadSales\FFS_Sales_2015"
+          TopLeft="29,77" />
         <EdgeLayout
           Id="Package\Load Sales\DFT_LoadSales.Paths[Union All Output 1]"
           TopLeft="311.75,239">
@@ -2262,24 +2202,20 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Load Sales\DFT_LoadSales\FFS_Sales_2016"
-          TopLeft="238,77" />
         <EdgeLayout
-          Id="Package\Load Sales\DFT_LoadSales.Paths[Flat File Source Output1]"
-          TopLeft="312.5,119">
+          Id="Package\Load Sales\DFT_LoadSales.Paths[Row Count Output 1]"
+          TopLeft="313.5,338">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,78"
+              EndConnector="0,36"
               Start="0,0"
-              End="0,70.5">
+              End="0,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,70.5" />
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2288,10 +2224,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="155,42"
-          Id="Package\Load Sales\DFT_LoadSales\FFS_Sales_2017"
-          TopLeft="458,79" />
         <EdgeLayout
           Id="Package\Load Sales\DFT_LoadSales.Paths[Flat File Source Output2]"
           TopLeft="535.5,121">
@@ -2318,6 +2250,62 @@
                     Point3="-197.75,53.5741239892183" />
                   <mssgle:LineSegment
                     End="-197.75,68.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Sales\DFT_LoadSales.Paths[Flat File Source Output1]"
+          TopLeft="312.5,119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load Sales\DFT_LoadSales.Paths[Flat File Source Output]"
+          TopLeft="106.5,119">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="174.75,78"
+              Start="0,0"
+              End="174.75,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.8787061994609" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.8787061994609"
+                    Point2="0,50.8787061994609"
+                    Point3="4,50.8787061994609" />
+                  <mssgle:LineSegment
+                    End="170.75,50.8787061994609" />
+                  <mssgle:CubicBezierSegment
+                    Point1="170.75,50.8787061994609"
+                    Point2="174.75,50.8787061994609"
+                    Point3="174.75,54.8787061994609" />
+                  <mssgle:LineSegment
+                    End="174.75,70.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
