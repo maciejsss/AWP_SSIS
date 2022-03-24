@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AWPDW"
+  DTS:DTSID="{5056ACC6-5252-4BBA-8ADB-F9761D835BC8}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-5H6628A\SQL;User ID=DataLogin;Initial Catalog=AWPDW;Provider=SQLNCLI11.1;Persist Security Info=True;Auto Translate=False;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+ZyRqcExukmFaPZbLXkCXAAAAAACAAAAAAAQZgAAAAEAACAAAAB06OPTX1EfAymucHLYo5fVv6/k+iQY8w+aH/oVObPe0wAAAAAOgAAAAAIAACAAAADW/rYWPN0lMjoh9R3P2YbNj6v0msmw1JyKVihdxJOozoAAAAAANh0wH+w5mlE54VCuyoSOi574ubI8tWt8bqCCaaGfXQS/2s5zMIhYFhVMcA6BC4KOpC3K3MbBUYJFu/Jl5wXj4Sa63IFCIQ44sr9te3ZNBZM0Civpa7wC7vlx93Rcv81T190qI8SQ7+PQhZGBM43aUvYa4+py/aCMNmliHaUGi0AAAADdQPdB0o1q+h+Man1/sBAdZgtPsU8hq7YKcdgQ7r3Z9bafgR+9BdfZ5DS2hRbHomdGBhCpSOeeAcPOvvOIJ1o2</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
