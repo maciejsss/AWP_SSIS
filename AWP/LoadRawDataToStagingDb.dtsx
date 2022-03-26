@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-5H6628A"
   DTS:CreatorName="DESKTOP-5H6628A\Maciej"
-  DTS:DTSID="{20F17D31-9BA5-4CDA-96C7-1B403C70780C}"
+  DTS:DTSID="{3C7AF8DA-F91A-4425-9CC2-4930D2E1F4BB}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.2000.150"
   DTS:LocaleID="1045"
-  DTS:ObjectName="ExecPackages"
+  DTS:ObjectName="LoadRAWDataToStagingDb"
   DTS:PackageType="5"
-  DTS:VersionBuild="11"
-  DTS:VersionGUID="{C3C9CE25-E582-4B62-AC26-680FFD61277D}">
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{DBBFB4AC-B7F2-4FF1-9933-4C2203EB8E78}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -48,6 +48,23 @@
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
           <PackageName>Customers.dtsx</PackageName>
+        </ExecutePackageTask>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\EXEC_DataProfiling"
+      DTS:CreationName="Microsoft.ExecutePackageTask"
+      DTS:Description="Execute Package Task"
+      DTS:DTSID="{E27AC198-3F87-4C3B-80B6-C96347967356}"
+      DTS:ExecutableType="Microsoft.ExecutePackageTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="EXEC_DataProfiling"
+      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <ExecutePackageTask>
+          <UseProjectReference>True</UseProjectReference>
+          <PackageName>DataProfiling.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -98,7 +115,7 @@
       <DTS:ObjectData>
         <ExecutePackageTask>
           <UseProjectReference>True</UseProjectReference>
-          <PackageName>Returns.dtsx</PackageName>
+          <PackageName>Sales.dtsx</PackageName>
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
@@ -138,6 +155,14 @@
     </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{D2E296DF-B370-4BCF-BBAC-3B3865CBD27F}"
+      DTS:From="Package\EXEC_Sales"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\EXEC_DataProfiling" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
@@ -208,6 +233,10 @@
           Id="Package\EXEC_Customers"
           TopLeft="120,414" />
         <NodeLayout
+          Size="169,42"
+          Id="Package\EXEC_DataProfiling"
+          TopLeft="339,312" />
+        <NodeLayout
           Size="150,42"
           Id="Package\EXEC_Products"
           TopLeft="117,130" />
@@ -227,6 +256,28 @@
           Size="157,42"
           Id="Package\EXEC_Territories"
           TopLeft="117,514" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="424.5,425">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-71"
+              Start="0,0"
+              End="0,-63.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-63.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="194.25,172">
