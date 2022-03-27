@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LoadDimensionsToDW"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{77CA35A6-6579-452B-B18A-FFFF15F2940B}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{AA1267F4-1D59-4E27-8EF3-FF1E9E59ED78}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -106,6 +106,173 @@
               </outputs>
             </component>
             <component
+              refId="Package\DFT_DimCalendar\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimCalendar]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\DFT_DimCalendar\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{5056ACC6-5252-4BBA-8ADB-F9761D835BC8}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[AWPDW]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Day]"
+                      cachedDataType="i4"
+                      cachedName="Day"
+                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Day]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Month]"
+                      cachedDataType="i4"
+                      cachedName="Month"
+                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Month]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Year]"
+                      cachedDataType="i4"
+                      cachedName="Year"
+                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Year]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Quarter]"
+                      cachedDataType="i4"
+                      cachedName="Quarter"
+                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Quarter]" />
+                    <inputColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Weekday]"
+                      cachedDataType="i4"
+                      cachedName="Weekday"
+                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
+                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Weekday]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      dataType="i4"
+                      name="ID" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
+                      dataType="i4"
+                      name="Day" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
+                      dataType="i4"
+                      name="Month" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
+                      dataType="i4"
+                      name="Year" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
+                      dataType="i4"
+                      name="Quarter" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
+                      dataType="i4"
+                      name="Weekday" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\DFT_DimCalendar\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCalendar\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\DFT_DimCalendar\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\DFT_DimCalendar\OLE_Calendar"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -167,15 +334,6 @@
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[ID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].ExternalColumns[ID]"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[ID]"
-                      name="ID"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Date]"
                       dataType="dbTimeStamp"
                       errorOrTruncationOperation="Conversion"
@@ -233,10 +391,6 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
                       refId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].ExternalColumns[Date]"
                       dataType="dbTimeStamp"
                       name="Date" />
@@ -267,11 +421,6 @@
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Error Output].Columns[ID]"
-                      dataType="i4"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Error Output].Columns[ID]"
-                      name="ID" />
                     <outputColumn
                       refId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Error Output].Columns[Date]"
                       dataType="dbTimeStamp"
@@ -319,184 +468,11 @@
                 </output>
               </outputs>
             </component>
-            <component
-              refId="Package\DFT_DimCalendar\OLE_DimCalendar"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="OLE_DimCalendar"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[DimCalendar]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1250</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\DFT_DimCalendar\OLE_DimCalendar.Connections[OleDbConnection]"
-                  connectionManagerID="{5056ACC6-5252-4BBA-8ADB-F9761D835BC8}:external"
-                  connectionManagerRefId="Project.ConnectionManagers[AWPDW]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].Columns[ID]"
-                      cachedDataType="i4"
-                      cachedName="ID"
-                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[ID]" />
-                    <inputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].Columns[Date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="Date"
-                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Date]" />
-                    <inputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].Columns[Day]"
-                      cachedDataType="i4"
-                      cachedName="Day"
-                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Day]" />
-                    <inputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].Columns[Month]"
-                      cachedDataType="i4"
-                      cachedName="Month"
-                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Month]" />
-                    <inputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].Columns[Year]"
-                      cachedDataType="i4"
-                      cachedName="Year"
-                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Year]" />
-                    <inputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].Columns[Quarter]"
-                      cachedDataType="i4"
-                      cachedName="Quarter"
-                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Quarter]" />
-                    <inputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].Columns[Weekday]"
-                      cachedDataType="i4"
-                      cachedName="Weekday"
-                      externalMetadataColumnId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
-                      lineageId="Package\DFT_DimCalendar\OLE_Calendar.Outputs[OLE DB Source Output].Columns[Weekday]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      dataType="dbDate"
-                      name="Date" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Day]"
-                      dataType="i4"
-                      name="Day" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Month]"
-                      dataType="i4"
-                      name="Month" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
-                      dataType="i4"
-                      name="Year" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Quarter]"
-                      dataType="i4"
-                      name="Quarter" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
-                      dataType="i4"
-                      name="Weekday" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\DFT_DimCalendar\OLE_DimCalendar.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\DFT_DimCalendar\OLE_DimCalendar.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\DFT_DimCalendar\OLE_DimCalendar.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\DFT_DimCalendar\OLE_DimCalendar.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
           </components>
           <paths>
             <path
               refId="Package\DFT_DimCalendar.Paths[Derived Column Output]"
-              endId="Package\DFT_DimCalendar\OLE_DimCalendar.Inputs[OLE DB Destination Input]"
+              endId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\DFT_DimCalendar\DRV.Outputs[Derived Column Output]" />
             <path
@@ -726,7 +702,7 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\DFT_DimCategories\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="dbDate"
+                      dataType="dbTimeStamp"
                       name="Param_0">
                       <properties>
                         <property
@@ -1018,11 +994,11 @@
                       name="CategoryName" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimCategories\OLE_DimCategories.Inputs[OLE DB Destination Input].ExternalColumns[StartDate]"
-                      dataType="dbDate"
+                      dataType="dbTimeStamp"
                       name="StartDate" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimCategories\OLE_DimCategories.Inputs[OLE DB Destination Input].ExternalColumns[EndDate]"
-                      dataType="dbDate"
+                      dataType="dbTimeStamp"
                       name="EndDate" />
                   </externalMetadataColumns>
                 </input>
@@ -3761,10 +3737,6 @@ FROM [AWP].[dbo].[Products];</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="164,42"
-          Id="Package\DFT_DimCalendar\OLE_DimCalendar"
-          TopLeft="246,274" />
-        <NodeLayout
           Size="145,42"
           Id="Package\DFT_DimCalendar\OLE_Calendar"
           TopLeft="199,92" />
@@ -3806,32 +3778,36 @@ FROM [AWP].[dbo].[Products];</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DFT_DimCalendar\OLE DB Destination"
+          TopLeft="256,272" />
         <EdgeLayout
           Id="Package\DFT_DimCalendar.Paths[Derived Column Output]"
           TopLeft="280.5,219">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="47.5,55"
+              EndConnector="61,53"
               Start="0,0"
-              End="47.5,47.5">
+              End="61,45.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.5" />
+                    End="0,22.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,23.5"
-                    Point2="0,27.5"
-                    Point3="4,27.5" />
+                    Point1="0,22.5"
+                    Point2="0,26.5"
+                    Point3="4,26.5" />
                   <mssgle:LineSegment
-                    End="43.5,27.5" />
+                    End="57,26.5" />
                   <mssgle:CubicBezierSegment
-                    Point1="43.5,27.5"
-                    Point2="47.5,27.5"
-                    Point3="47.5,31.5" />
+                    Point1="57,26.5"
+                    Point2="61,26.5"
+                    Point3="61,30.5" />
                   <mssgle:LineSegment
-                    End="47.5,47.5" />
+                    End="61,45.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3843,19 +3819,6 @@ FROM [AWP].[dbo].[Products];</property>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimCalendar\OLE_DimCalendar">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_DimCalendar\OLE_Calendar">
     <Properties>
@@ -3875,13 +3838,55 @@ FROM [AWP].[dbo].[Products];</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="153,42"
-          Id="Package\DFT_DimCategories\OLE_Categories"
-          TopLeft="243,5.5" />
+          Size="154,42"
+          Id="Package\DFT_DimCategories\Derived Column"
+          TopLeft="104.5,209.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DFT_DimCategories\Derived Column 1"
+          TopLeft="238,515.5" />
         <NodeLayout
           Size="209,42"
           Id="Package\DFT_DimCategories\Slowly Changing Dimension"
           TopLeft="215,107.5" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\DFT_DimCategories\OLE_DimCategories"
+          TopLeft="238,617.5" />
+        <NodeLayout
+          Size="121,42"
+          Id="Package\DFT_DimCategories\Union All"
+          TopLeft="259,413.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\DFT_DimCategories\OLE DB Command"
+          TopLeft="92.5000000000001,311.5" />
+        <NodeLayout
+          Size="153,42"
+          Id="Package\DFT_DimCategories\OLE_Categories"
+          TopLeft="243,5.5" />
+        <EdgeLayout
+          Id="Package\DFT_DimCategories.Paths[Union All Output 1]"
+          TopLeft="319.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[OLE DB Source Output]"
           TopLeft="319.5,47.5">
@@ -3904,64 +3909,32 @@ FROM [AWP].[dbo].[Products];</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="154,42"
-          Id="Package\DFT_DimCategories\Derived Column"
-          TopLeft="104.5,209.5" />
         <EdgeLayout
-          Id="Package\DFT_DimCategories.Paths[Historical Attribute Inserts Output]"
-          TopLeft="286,149.5">
+          Id="Package\DFT_DimCategories.Paths[OLE DB Command Output]"
+          TopLeft="175.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-104.5,60"
+              EndConnector="125.166666666667,60"
               Start="0,0"
-              End="-104.5,52.5">
+              End="125.166666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.2735042735043" />
+                    End="0,31.5301794453507" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
+                    Point1="0,31.5301794453507"
+                    Point2="0,35.5301794453507"
+                    Point3="4,35.5301794453507" />
                   <mssgle:LineSegment
-                    End="-100.5,24.2735042735043" />
+                    End="121.166666666667,35.5301794453507" />
                   <mssgle:CubicBezierSegment
-                    Point1="-100.5,24.2735042735043"
-                    Point2="-104.5,24.2735042735043"
-                    Point3="-104.5,28.2735042735043" />
+                    Point1="121.166666666667,35.5301794453507"
+                    Point2="125.166666666667,35.5301794453507"
+                    Point3="125.166666666667,39.5301794453507" />
                   <mssgle:LineSegment
-                    End="-104.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-127.30638671875,29.2735042735043,150.1127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\DFT_DimCategories\OLE DB Command"
-          TopLeft="92.5000000000001,311.5" />
-        <EdgeLayout
-          Id="Package\DFT_DimCategories.Paths[Derived Column Output]"
-          TopLeft="178.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="125.166666666667,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3970,10 +3943,6 @@ FROM [AWP].[dbo].[Products];</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="121,42"
-          Id="Package\DFT_DimCategories\Union All"
-          TopLeft="259,413.5" />
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[New Output]"
           TopLeft="353,149.5">
@@ -4011,69 +3980,41 @@ FROM [AWP].[dbo].[Products];</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_DimCategories.Paths[OLE DB Command Output]"
-          TopLeft="175.5,353.5">
+          Id="Package\DFT_DimCategories.Paths[Historical Attribute Inserts Output]"
+          TopLeft="286,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.166666666667,60"
+              EndConnector="-104.5,60"
               Start="0,0"
-              End="125.166666666667,52.5">
+              End="-104.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5301794453507" />
+                    End="0,20.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5301794453507"
-                    Point2="0,35.5301794453507"
-                    Point3="4,35.5301794453507" />
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
                   <mssgle:LineSegment
-                    End="121.166666666667,35.5301794453507" />
+                    End="-100.5,24.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="121.166666666667,35.5301794453507"
-                    Point2="125.166666666667,35.5301794453507"
-                    Point3="125.166666666667,39.5301794453507" />
+                    Point1="-100.5,24.2735042735043"
+                    Point2="-104.5,24.2735042735043"
+                    Point3="-104.5,28.2735042735043" />
                   <mssgle:LineSegment
-                    End="125.166666666667,52.5" />
+                    End="-104.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-127.30638671875,29.2735042735043,150.1127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DFT_DimCategories\Derived Column 1"
-          TopLeft="238,515.5" />
-        <EdgeLayout
-          Id="Package\DFT_DimCategories.Paths[Union All Output 1]"
-          TopLeft="319.5,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="172,42"
-          Id="Package\DFT_DimCategories\OLE_DimCategories"
-          TopLeft="238,617.5" />
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[Derived Column Output1]"
           TopLeft="321.75,557.5">
@@ -4096,6 +4037,35 @@ FROM [AWP].[dbo].[Products];</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimCategories.Paths[Derived Column Output]"
+          TopLeft="178.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text=""
+          ParentId="Package\DFT_DimCategories"
+          FontInfo="{assembly:Null}"
+          Size="34,40"
+          Id="3c015e3d-5528-498b-9934-7cf38e015f69"
+          TopLeft="208,340" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -4142,6 +4112,19 @@ FROM [AWP].[dbo].[Products];</property>
   &lt;DateVariable&gt;System::CreationDate&lt;/DateVariable&gt;
   &lt;EnableInferredSupport&gt;false&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimCategories\OLE_DimCategories">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -4282,105 +4265,33 @@ FROM [AWP].[dbo].[Products];</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="169,42"
-          Id="Package\DFT_DimSubcategories\OLE_Subcategories"
-          TopLeft="148,5.5" />
-        <NodeLayout
-          Size="209,42"
-          Id="Package\DFT_DimSubcategories\Slowly Changing Dimension"
-          TopLeft="128,107.5" />
-        <EdgeLayout
-          Id="Package\DFT_DimSubcategories.Paths[OLE DB Source Output]"
-          TopLeft="232.5,47.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
           Size="154,42"
           Id="Package\DFT_DimSubcategories\Derived Column"
           TopLeft="17.5,209.5" />
-        <EdgeLayout
-          Id="Package\DFT_DimSubcategories.Paths[Historical Attribute Inserts Output]"
-          TopLeft="199,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-104.5,60"
-              Start="0,0"
-              End="-104.5,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,20.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-100.5,24.2735042735043" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-100.5,24.2735042735043"
-                    Point2="-104.5,24.2735042735043"
-                    Point3="-104.5,28.2735042735043" />
-                  <mssgle:LineSegment
-                    End="-104.5,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-127.30638671875,29.2735042735043,150.1127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="166,42"
-          Id="Package\DFT_DimSubcategories\OLE DB Command"
-          TopLeft="5.50000000000003,311.5" />
-        <EdgeLayout
-          Id="Package\DFT_DimSubcategories.Paths[Derived Column Output]"
-          TopLeft="91.5,251.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <NodeLayout
           Size="121,42"
           Id="Package\DFT_DimSubcategories\Union All"
           TopLeft="172,413.5" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\DFT_DimSubcategories\OLE_Subcategories"
+          TopLeft="148,5.5" />
+        <NodeLayout
+          Size="163,42"
+          Id="Package\DFT_DimSubcategories\Derived Column 1"
+          TopLeft="151,515.5" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\DFT_DimSubcategories\OLE DB Command"
+          TopLeft="5.50000000000003,311.5" />
+        <NodeLayout
+          Size="188,42"
+          Id="Package\DFT_DimSubcategories\OLE_DimSubcategories"
+          TopLeft="151,617.5" />
+        <NodeLayout
+          Size="209,42"
+          Id="Package\DFT_DimSubcategories\Slowly Changing Dimension"
+          TopLeft="128,107.5" />
         <EdgeLayout
           Id="Package\DFT_DimSubcategories.Paths[New Output]"
           TopLeft="266,149.5">
@@ -4418,69 +4329,41 @@ FROM [AWP].[dbo].[Products];</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\DFT_DimSubcategories.Paths[OLE DB Command Output]"
-          TopLeft="88.5,353.5">
+          Id="Package\DFT_DimSubcategories.Paths[Historical Attribute Inserts Output]"
+          TopLeft="199,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.166666666667,60"
+              EndConnector="-104.5,60"
               Start="0,0"
-              End="125.166666666667,52.5">
+              End="-104.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5301794453507" />
+                    End="0,20.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5301794453507"
-                    Point2="0,35.5301794453507"
-                    Point3="4,35.5301794453507" />
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
                   <mssgle:LineSegment
-                    End="121.166666666667,35.5301794453507" />
+                    End="-100.5,24.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="121.166666666667,35.5301794453507"
-                    Point2="125.166666666667,35.5301794453507"
-                    Point3="125.166666666667,39.5301794453507" />
+                    Point1="-100.5,24.2735042735043"
+                    Point2="-104.5,24.2735042735043"
+                    Point3="-104.5,28.2735042735043" />
                   <mssgle:LineSegment
-                    End="125.166666666667,52.5" />
+                    End="-104.5,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="-127.30638671875,29.2735042735043,150.1127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="163,42"
-          Id="Package\DFT_DimSubcategories\Derived Column 1"
-          TopLeft="151,515.5" />
-        <EdgeLayout
-          Id="Package\DFT_DimSubcategories.Paths[Union All Output 1]"
-          TopLeft="232.5,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="188,42"
-          Id="Package\DFT_DimSubcategories\OLE_DimSubcategories"
-          TopLeft="151,617.5" />
         <EdgeLayout
           Id="Package\DFT_DimSubcategories.Paths[Derived Column Output1]"
           TopLeft="232.5,557.5">
@@ -4512,7 +4395,117 @@ FROM [AWP].[dbo].[Products];</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimSubcategories.Paths[Derived Column Output]"
+          TopLeft="91.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimSubcategories.Paths[Union All Output 1]"
+          TopLeft="232.5,455.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimSubcategories.Paths[OLE DB Source Output]"
+          TopLeft="232.5,47.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\DFT_DimSubcategories.Paths[OLE DB Command Output]"
+          TopLeft="88.5,353.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125.166666666667,60"
+              Start="0,0"
+              End="125.166666666667,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.5301794453507" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.5301794453507"
+                    Point2="0,35.5301794453507"
+                    Point3="4,35.5301794453507" />
+                  <mssgle:LineSegment
+                    End="121.166666666667,35.5301794453507" />
+                  <mssgle:CubicBezierSegment
+                    Point1="121.166666666667,35.5301794453507"
+                    Point2="125.166666666667,35.5301794453507"
+                    Point3="125.166666666667,39.5301794453507" />
+                  <mssgle:LineSegment
+                    End="125.166666666667,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4587,7 +4580,7 @@ FROM [AWP].[dbo].[Products];</property>
     design-time-name="Package\DFT_DimTerritories">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,42"
           Id="Package\DFT_DimTerritories\OLE_Territories"
@@ -4615,7 +4608,9 @@ FROM [AWP].[dbo].[Products];</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4636,6 +4631,19 @@ FROM [AWP].[dbo].[Products];</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_DimTerritories\OLE_Territories">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimCalendar\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Calendar"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{08595117-802B-4AE7-B80C-CAA2640178BF}">
+  DTS:VersionBuild="41"
+  DTS:VersionGUID="{86023EB8-A443-4DC8-A019-81970FB9526B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -745,10 +745,6 @@
                           refId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
                           dataType="i4"
                           name="Weekday" />
-                        <externalMetadataColumn
-                          refId="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                          dataType="i4"
-                          name="ID" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -979,6 +975,10 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="130,42"
+          Id="Package\Load Calendar\DFT_LoadCalendar\Row Count"
+          TopLeft="121,175" />
+        <NodeLayout
           Size="143,42"
           Id="Package\Load Calendar\DFT_LoadCalendar\FFS_Calendar"
           TopLeft="108,65" />
@@ -991,19 +991,19 @@
           Id="Package\Load Calendar\DFT_LoadCalendar\OLE_Calendar"
           TopLeft="112,360" />
         <EdgeLayout
-          Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Derived Column Output]"
-          TopLeft="185.5,298">
+          Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Row Count Output 1]"
+          TopLeft="186.25,217">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,62"
+              EndConnector="0,39"
               Start="0,0"
-              End="0,54.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,54.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1012,10 +1012,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="130,42"
-          Id="Package\Load Calendar\DFT_LoadCalendar\Row Count"
-          TopLeft="121,175" />
         <EdgeLayout
           Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Flat File Source Output]"
           TopLeft="182.75,107">
@@ -1039,19 +1035,19 @@
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Row Count Output 1]"
-          TopLeft="186.25,217">
+          Id="Package\Load Calendar\DFT_LoadCalendar.Paths[Derived Column Output]"
+          TopLeft="185.5,298">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,39"
+              EndConnector="0,62"
               Start="0,0"
-              End="0,31.5">
+              End="0,54.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5" />
+                    End="0,54.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
