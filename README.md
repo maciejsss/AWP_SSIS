@@ -1,6 +1,8 @@
 # AWP
 AdventureWorks DW Project
 
+<img src="Documentation/img/Flow.png">
+
 <img src="Documentation/img/PackageProducts.png">
 <img src="Documentation/img/DFT_Products.png">
 <img src="Documentation/img/PackageCustomers.png">
