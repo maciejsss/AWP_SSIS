@@ -3,7 +3,7 @@ AdventureWorks DW Project
 
 <img src="Documentation/img/flow.png">
 
-<img src="Documentation/img/PackageProducts.png"><img src="Documentation/img/DFT_Products.png">
+<img src="Documentation/img/PackageProducts.png"> => <img src="Documentation/img/DFT_Products.png">
 
 <img src="Documentation/img/PackageCustomers.png">
 <img src="Documentation/img/DFT_Customers.png">
