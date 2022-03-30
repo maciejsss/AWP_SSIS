@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LoadFactsToDW"
   DTS:PackageType="5"
-  DTS:VersionBuild="16"
-  DTS:VersionGUID="{D44663E8-FC3C-4ECC-844D-7A46A39DDF47}">
+  DTS:VersionBuild="17"
+  DTS:VersionGUID="{35E01371-75B8-4E3D-837F-CAE5D7B54041}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -147,9 +147,9 @@
                       dataType="i4"
                       name="ReturnQuantity" />
                     <externalMetadataColumn
-                      refId="Package\LoadFactReturns\OLE_FactReturns.Inputs[OLE DB Destination Input].ExternalColumns[ReturnID]"
+                      refId="Package\LoadFactReturns\OLE_FactReturns.Inputs[OLE DB Destination Input].ExternalColumns[ReturnKey]"
                       dataType="i4"
-                      name="ReturnID" />
+                      name="ReturnKey" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -691,9 +691,9 @@ where [refTable].[ProductKey] = ?</property>
                       dataType="r8"
                       name="ProductPrice" />
                     <externalMetadataColumn
-                      refId="Package\LoadFactSales\OLE_FactSales.Inputs[OLE DB Destination Input].ExternalColumns[SaleID]"
+                      refId="Package\LoadFactSales\OLE_FactSales.Inputs[OLE DB Destination Input].ExternalColumns[SaleKey]"
                       dataType="i4"
-                      name="SaleID" />
+                      name="SaleKey" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1004,7 +1004,7 @@ where [refTable].[ProductKey] = ?</property>
     design-time-name="Package\LoadFactReturns">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="160,42"
           Id="Package\LoadFactReturns\OLE_FactReturns"
@@ -1032,9 +1032,7 @@ where [refTable].[ProductKey] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -1076,13 +1074,13 @@ where [refTable].[ProductKey] = ?</property>
           Id="Package\LoadFactSales\OLE_FactSales"
           TopLeft="444,413" />
         <NodeLayout
-          Size="128,42"
-          Id="Package\LoadFactSales\OLE_Sales"
-          TopLeft="240,47" />
-        <NodeLayout
           Size="113,42"
           Id="Package\LoadFactSales\Lookup"
           TopLeft="350,222" />
+        <NodeLayout
+          Size="128,42"
+          Id="Package\LoadFactSales\OLE_Sales"
+          TopLeft="240,47" />
         <EdgeLayout
           Id="Package\LoadFactSales.Paths[OLE DB Source Output]"
           TopLeft="304,89">
@@ -1170,25 +1168,12 @@ where [refTable].[ProductKey] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\LoadFactSales\OLE_Sales">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\LoadFactSales\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -1198,10 +1183,23 @@ where [refTable].[ProductKey] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\LoadFactSales\OLE_Sales">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

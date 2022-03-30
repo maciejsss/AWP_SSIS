@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LoadDimensionsToDW"
   DTS:PackageType="5"
-  DTS:VersionBuild="48"
-  DTS:VersionGUID="{C76BEEDE-A0DB-4772-9859-A6BB1A4DB7CB}">
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{59F5F7CF-B08B-446A-A819-84652CCCBC33}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -217,10 +217,6 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                      dataType="i4"
-                      name="ID" />
-                    <externalMetadataColumn
                       refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       dataType="dbDate"
                       name="Date" />
@@ -244,6 +240,10 @@
                       refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Weekday]"
                       dataType="i4"
                       name="Weekday" />
+                    <externalMetadataColumn
+                      refId="Package\DFT_DimCalendar\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                      dataType="i4"
+                      name="DateKey" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3846,7 +3846,7 @@ FROM [AWP].[dbo].[Products];</property>
     design-time-name="Package\DFT_DimCalendar">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="145,42"
           Id="Package\DFT_DimCalendar\OLE_Calendar"
@@ -3890,9 +3890,7 @@ FROM [AWP].[dbo].[Products];</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -3926,9 +3924,7 @@ FROM [AWP].[dbo].[Products];</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
