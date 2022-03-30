@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Products"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{BDC36FE1-349F-47D9-9499-DA593F92513F}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{9E27AF96-0AA4-487A-9A2F-335BD8023251}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -416,7 +416,7 @@
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[Products]</property>
+                      name="OpenRowset">[dbo].[Products]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -559,17 +559,17 @@
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductSKU]"
                           dataType="wstr"
-                          length="50"
+                          length="255"
                           name="ProductSKU" />
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
                           dataType="wstr"
-                          length="50"
+                          length="255"
                           name="ProductName" />
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ModelName]"
                           dataType="wstr"
-                          length="50"
+                          length="255"
                           name="ModelName" />
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductDescription]"
@@ -579,17 +579,17 @@
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductColor]"
                           dataType="wstr"
-                          length="50"
+                          length="255"
                           name="ProductColor" />
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductSize]"
                           dataType="wstr"
-                          length="50"
+                          length="255"
                           name="ProductSize" />
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductStyle]"
                           dataType="wstr"
-                          length="50"
+                          length="255"
                           name="ProductStyle" />
                         <externalMetadataColumn
                           refId="Package\Load Products\DFT_LoadProducts\OLE_Products.Inputs[OLE DB Destination Input].ExternalColumns[ProductCost]"
@@ -1015,7 +1015,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4EF4E849-9B45-4CF7-A881-6C3E3877F028}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Calendar" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Products" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
@@ -1121,7 +1121,7 @@
     design-time-name="Package\Load Products\DFT_LoadProducts">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="130,42"
           Id="Package\Load Products\DFT_LoadProducts\Row Count"
@@ -1133,27 +1133,29 @@
         <NodeLayout
           Size="144,42"
           Id="Package\Load Products\DFT_LoadProducts\OLE_Products"
-          TopLeft="214,334" />
+          TopLeft="220,325" />
         <EdgeLayout
           Id="Package\Load Products\DFT_LoadProducts.Paths[Row Count Output 1]"
-          TopLeft="289,253">
+          TopLeft="292,253">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,81"
+              EndConnector="0,72"
               Start="0,0"
-              End="0,73.5">
+              End="0,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,73.5" />
+                    End="0,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -1175,7 +1177,9 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

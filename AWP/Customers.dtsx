@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Customers"
   DTS:PackageType="5"
-  DTS:VersionBuild="13"
-  DTS:VersionGUID="{1F1164F8-0503-4188-8ED3-A3DDC103B61C}">
+  DTS:VersionBuild="14"
+  DTS:VersionGUID="{EE0DCBFA-6B8D-493B-93E4-1F24CE1066F5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -805,28 +805,14 @@
           Size="176,42"
           Id="Package\Load Customers\DFT_LoadCustomers"
           TopLeft="55,120" />
-        <EdgeLayout
-          Id="Package\Load Customers.PrecedenceConstraints[Constraint 1]"
-          TopLeft="144.5,68">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52"
-              Start="0,0"
-              End="0,44.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="148,42"
+          Id="Package\Load Customers\SQL_LogInsert"
+          TopLeft="73,214" />
+        <NodeLayout
+          Size="154,45"
+          Id="Package\Load Customers\TRN_Customers"
+          TopLeft="69,23" />
         <EdgeLayout
           Id="Package\Load Customers.PrecedenceConstraints[Constraint]"
           TopLeft="145,162">
@@ -849,14 +835,28 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="148,42"
-          Id="Package\Load Customers\SQL_LogInsert"
-          TopLeft="73,214" />
-        <NodeLayout
-          Size="154,45"
-          Id="Package\Load Customers\TRN_Customers"
-          TopLeft="69,23" />
+        <EdgeLayout
+          Id="Package\Load Customers.PrecedenceConstraints[Constraint 1]"
+          TopLeft="144.5,68">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52"
+              Start="0,0"
+              End="0,44.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"

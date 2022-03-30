@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Calendar"
   DTS:PackageType="5"
-  DTS:VersionBuild="41"
-  DTS:VersionGUID="{86023EB8-A443-4DC8-A019-81970FB9526B}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{F480E38B-F980-4F4A-A57D-DB30EAAE5C24}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

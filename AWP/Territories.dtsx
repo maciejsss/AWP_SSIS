@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Territories"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{28033139-3FF0-4076-9994-C83C3BB84F27}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{25AE27C5-2BAB-4AE2-ADE8-685FAE07CC57}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>

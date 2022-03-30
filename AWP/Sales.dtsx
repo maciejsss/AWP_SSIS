@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Sales"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{D3A508AB-3DAE-4E8D-A573-925BD8BB4A0C}">
+  DTS:VersionBuild="29"
+  DTS:VersionGUID="{4F368A05-1FA3-47A4-96C7-8595D635AC78}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1471,10 +1471,6 @@
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Load Sales\DFT_LoadSales\OLE_Sales.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
-                          dataType="i4"
-                          name="ID" />
-                        <externalMetadataColumn
                           refId="Package\Load Sales\DFT_LoadSales\OLE_Sales.Inputs[OLE DB Destination Input].ExternalColumns[OrderDate]"
                           dataType="dbTimeStamp"
                           name="OrderDate" />
@@ -2049,7 +2045,7 @@
           <DTS:ObjectData>
             <SQLTask:SqlTaskData
               SQLTask:Connection="{4EF4E849-9B45-4CF7-A881-6C3E3877F028}"
-              SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Categories" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+              SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Sales" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>

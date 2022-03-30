@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ClearTables"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{18806582-C187-43DC-9E88-D2C65D9E84F0}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{0D8EB840-21A9-45AA-A666-6A38120C6D1B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -48,7 +48,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{5056ACC6-5252-4BBA-8ADB-F9761D835BC8}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[DimCalendar]&#xA;TRUNCATE TABLE [dbo].[DimCategories]&#xA;TRUNCATE TABLE [dbo].[DimCustomers]&#xA;TRUNCATE TABLE [dbo].[DimProducts]&#xA;TRUNCATE TABLE [dbo].[DimProducts]&#xA;TRUNCATE TABLE [dbo].[DimSubcategories]&#xA;TRUNCATE TABLE [dbo].[DimTerritories]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[DimCalendar]&#xA;TRUNCATE TABLE [dbo].[DimCategories]&#xA;TRUNCATE TABLE [dbo].[DimCustomers]&#xA;TRUNCATE TABLE [dbo].[DimProducts]&#xA;TRUNCATE TABLE [dbo].[DimProducts]&#xA;TRUNCATE TABLE [dbo].[DimSubcategories]&#xA;TRUNCATE TABLE [dbo].[DimTerritories]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -125,10 +125,6 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="127,42"
-          Id="Package\TRN_Logs"
-          TopLeft="104,79" />
-        <NodeLayout
           Size="152,42"
           Id="Package\ClearStagingDB"
           TopLeft="243,167" />
@@ -140,6 +136,10 @@
           Size="139,42"
           Id="Package\FactClearDW"
           TopLeft="658,321" />
+        <NodeLayout
+          Size="127,42"
+          Id="Package\TRN_Logs"
+          TopLeft="104,79" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="167.5,121">

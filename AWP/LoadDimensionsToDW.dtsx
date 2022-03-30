@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="LoadDimensionsToDW"
   DTS:PackageType="5"
-  DTS:VersionBuild="37"
-  DTS:VersionGUID="{AA1267F4-1D59-4E27-8EF3-FF1E9E59ED78}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{C76BEEDE-A0DB-4772-9859-A6BB1A4DB7CB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -713,7 +713,7 @@
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\DFT_DimCategories\OLE DB Command.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="i2"
+                      dataType="i4"
                       name="Param_1">
                       <properties>
                         <property
@@ -984,7 +984,7 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\DFT_DimCategories\OLE_DimCategories.Inputs[OLE DB Destination Input].ExternalColumns[ProductCategoryKey]"
-                      dataType="i2"
+                      dataType="i4"
                       name="ProductCategoryKey" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimCategories\OLE_DimCategories.Inputs[OLE DB Destination Input].ExternalColumns[CategoryName]"
@@ -1914,21 +1914,21 @@ FROM dbo.Customers c;</property>
                     <inputColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].Columns[ProductSKU]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="ProductSKU"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductSKU]"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductSKU]" />
                     <inputColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].Columns[ProductName]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="ProductName"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductName]" />
                     <inputColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].Columns[ModelName]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="ModelName"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ModelName]"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ModelName]" />
@@ -1942,36 +1942,24 @@ FROM dbo.Customers c;</property>
                     <inputColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].Columns[ProductColor]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="ProductColor"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductColor]"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductColor]" />
                     <inputColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].Columns[ProductSize]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="ProductSize"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductSize]"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductSize]" />
                     <inputColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].Columns[ProductStyle]"
                       cachedDataType="wstr"
-                      cachedLength="50"
+                      cachedLength="255"
                       cachedName="ProductStyle"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductStyle]"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductStyle]" />
-                    <inputColumn
-                      refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].Columns[ProductCost]"
-                      cachedDataType="r8"
-                      cachedName="ProductCost"
-                      externalMetadataColumnId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductCost]"
-                      lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductCost]" />
-                    <inputColumn
-                      refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].Columns[ProductPrice]"
-                      cachedDataType="r8"
-                      cachedName="ProductPrice"
-                      externalMetadataColumnId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductPrice]"
-                      lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductPrice]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1986,17 +1974,17 @@ FROM dbo.Customers c;</property>
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductSKU]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductSKU" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductName]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductName" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ModelName]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ModelName" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductDescription]"
@@ -2006,26 +1994,18 @@ FROM dbo.Customers c;</property>
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductColor]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductColor" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductSize]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductSize" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductStyle]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductStyle" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductCost]"
-                      dataType="r8"
-                      name="ProductCost" />
-                    <externalMetadataColumn
-                      refId="Package\DFT_DimProducts\OLE_DimProducts.Inputs[OLE DB Destination Input].ExternalColumns[ProductPrice]"
-                      dataType="r8"
-                      name="ProductPrice" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2079,17 +2059,18 @@ FROM dbo.Customers c;</property>
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [ProductKey], 
-       [ProductSubcategoryKey], 
-       [ProductSKU], 
-       [ProductName], 
-       [ModelName], 
-       IIF(ProductDescription = '0','NA',ProductDescription) as [ProductDescription], 
-       [ProductColor],
-       CASE [ProductSize] WHEN '0' THEN 'NA' ELSE ProductSize END AS [ProductSize],
-       CASE [ProductStyle] WHEN '0' THEN 'NA' ELSE ProductStyle END AS [ProductStyle], 
-       [ProductCost],
-       ISNULL(ProductPrice,ProductCost * 1.4) as [ProductPrice]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+	[ProductKey], 
+	[ProductSubcategoryKey], 
+	[ProductSKU], 
+	RTRIM(LTRIM([ProductName])) as [ProductName], 
+	RTRIM(LTRIM([ModelName])) as [ModelName], 
+	IIF(ProductDescription = '0','NA',ProductDescription) as [ProductDescription], 
+	RTRIM(LTRIM([ProductColor])) as [ProductColor],
+	CASE [ProductSize] WHEN '0' THEN 'NA' ELSE ProductSize END AS [ProductSize],
+	CASE [ProductStyle] WHEN '0' THEN 'NA' ELSE ProductStyle END AS [ProductStyle], 
+	[ProductCost],
+	ISNULL(ProductPrice,ProductCost * 1.4) as [ProductPrice]
 FROM [AWP].[dbo].[Products];</property>
                 <property
                   dataType="System.String"
@@ -2150,7 +2131,7 @@ FROM [AWP].[dbo].[Products];</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductSKU]"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductSKU]"
                       name="ProductSKU"
                       truncationRowDisposition="FailComponent" />
@@ -2160,7 +2141,7 @@ FROM [AWP].[dbo].[Products];</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductName]"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductName]"
                       name="ProductName"
                       truncationRowDisposition="FailComponent" />
@@ -2170,7 +2151,7 @@ FROM [AWP].[dbo].[Products];</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ModelName]"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ModelName]"
                       name="ModelName"
                       truncationRowDisposition="FailComponent" />
@@ -2190,7 +2171,7 @@ FROM [AWP].[dbo].[Products];</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductColor]"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductColor]"
                       name="ProductColor"
                       truncationRowDisposition="FailComponent" />
@@ -2200,7 +2181,7 @@ FROM [AWP].[dbo].[Products];</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductSize]"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductSize]"
                       name="ProductSize"
                       truncationRowDisposition="FailComponent" />
@@ -2210,7 +2191,7 @@ FROM [AWP].[dbo].[Products];</property>
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductStyle]"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].Columns[ProductStyle]"
                       name="ProductStyle"
                       truncationRowDisposition="FailComponent" />
@@ -2246,17 +2227,17 @@ FROM [AWP].[dbo].[Products];</property>
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductSKU]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductSKU" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductName]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductName" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ModelName]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ModelName" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductDescription]"
@@ -2266,17 +2247,17 @@ FROM [AWP].[dbo].[Products];</property>
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductColor]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductColor" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductSize]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductSize" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductStyle]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       name="ProductStyle" />
                     <externalMetadataColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Output].ExternalColumns[ProductCost]"
@@ -2306,19 +2287,19 @@ FROM [AWP].[dbo].[Products];</property>
                     <outputColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductSKU]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductSKU]"
                       name="ProductSKU" />
                     <outputColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductName]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductName]"
                       name="ProductName" />
                     <outputColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ModelName]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ModelName]"
                       name="ModelName" />
                     <outputColumn
@@ -2330,19 +2311,19 @@ FROM [AWP].[dbo].[Products];</property>
                     <outputColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductColor]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductColor]"
                       name="ProductColor" />
                     <outputColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductSize]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductSize]"
                       name="ProductSize" />
                     <outputColumn
                       refId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductStyle]"
                       dataType="wstr"
-                      length="50"
+                      length="255"
                       lineageId="Package\DFT_DimProducts\OLE_Products.Outputs[OLE DB Source Error Output].Columns[ProductStyle]"
                       name="ProductStyle" />
                     <outputColumn
@@ -3669,25 +3650,49 @@ FROM [AWP].[dbo].[Products];</property>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\TRN_Dimensions"
-      DTS:CreationName="Microsoft.ExecuteSQLTask"
-      DTS:Description="Execute SQL Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{E01198BB-41CD-4107-A66B-96EA922FCD7A}"
-      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="TRN_Dimensions"
-      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2019; © 2019 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
-      DTS:ThreadHint="0">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <SQLTask:SqlTaskData
-          SQLTask:Connection="{5056ACC6-5252-4BBA-8ADB-F9761D835BC8}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.DimCustomers&#xA;TRUNCATE TABLE dbo.DimProducts&#xA;TRUNCATE TABLE dbo.DimCalendar&#xA;TRUNCATE TABLE dbo.DimCategories&#xA;TRUNCATE TABLE dbo.DimSubcategories&#xA;TRUNCATE TABLE dbo.DimTerritories" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{B72C2F5B-76EB-4796-898A-0003D349B01E}"
+      DTS:From="Package\DFT_DimCustomers"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\DFT_DimCalendar" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DC6DF414-67BB-4D5D-A83E-C7AA5D801071}"
+      DTS:From="Package\DFT_DimCalendar"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\DFT_DimCategories" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{4FEE47F5-B93E-424B-A6EE-465B88044C48}"
+      DTS:From="Package\DFT_DimCategories"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\DFT_DimSubcategories" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{0E5B0CB7-AEEF-4ED3-ABE1-6E7D3DEBF5E8}"
+      DTS:From="Package\DFT_DimSubcategories"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\DFT_DimTerritories" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{20710F58-C8C9-48F6-B2B9-E3A4E63AD571}"
+      DTS:From="Package\DFT_DimTerritories"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\DFT_DimProducts" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -3699,7 +3704,7 @@ FROM [AWP].[dbo].[Products];</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="164,42"
           Id="Package\DFT_DimCalendar"
@@ -3719,15 +3724,121 @@ FROM [AWP].[dbo].[Products];</property>
         <NodeLayout
           Size="188,42"
           Id="Package\DFT_DimSubcategories"
-          TopLeft="137,320" />
+          TopLeft="129,321" />
         <NodeLayout
           Size="170,42"
           Id="Package\DFT_DimTerritories"
           TopLeft="406,319" />
-        <NodeLayout
-          Size="159,42"
-          Id="Package\TRN_Dimensions"
-          TopLeft="724,113" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="403,113">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-100,0"
+              Start="0,0"
+              End="-92.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-92.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="221.5,134">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,67"
+              Start="0,0"
+              End="0,59.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="222.5,243">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="317,341">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="89,0"
+              Start="0,0"
+              End="81.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="81.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="491.75,319">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-77"
+              Start="0,0"
+              End="0,-69.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-69.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -3735,11 +3846,15 @@ FROM [AWP].[dbo].[Products];</property>
     design-time-name="Package\DFT_DimCalendar">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="145,42"
           Id="Package\DFT_DimCalendar\OLE_Calendar"
           TopLeft="199,92" />
+        <NodeLayout
+          Size="171,42"
+          Id="Package\DFT_DimCalendar\OLE DB Destination"
+          TopLeft="256,272" />
         <NodeLayout
           Size="99,42"
           Id="Package\DFT_DimCalendar\DRV"
@@ -3775,13 +3890,11 @@ FROM [AWP].[dbo].[Products];</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="171,42"
-          Id="Package\DFT_DimCalendar\OLE DB Destination"
-          TopLeft="256,272" />
         <EdgeLayout
           Id="Package\DFT_DimCalendar.Paths[Derived Column Output]"
           TopLeft="280.5,219">
@@ -3813,7 +3926,9 @@ FROM [AWP].[dbo].[Products];</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3821,6 +3936,19 @@ FROM [AWP].[dbo].[Products];</property>
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_DimCalendar\OLE_Calendar">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\DFT_DimCalendar\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -3840,45 +3968,45 @@ FROM [AWP].[dbo].[Products];</property>
         <NodeLayout
           Size="154,42"
           Id="Package\DFT_DimCategories\Derived Column"
-          TopLeft="104.5,209.5" />
+          TopLeft="108.5,194.5" />
         <NodeLayout
           Size="163,42"
           Id="Package\DFT_DimCategories\Derived Column 1"
-          TopLeft="238,515.5" />
+          TopLeft="239,424.5" />
         <NodeLayout
           Size="209,42"
           Id="Package\DFT_DimCategories\Slowly Changing Dimension"
-          TopLeft="215,107.5" />
+          TopLeft="213,107.5" />
         <NodeLayout
           Size="172,42"
           Id="Package\DFT_DimCategories\OLE_DimCategories"
-          TopLeft="238,617.5" />
+          TopLeft="235,510.5" />
         <NodeLayout
           Size="121,42"
           Id="Package\DFT_DimCategories\Union All"
-          TopLeft="259,413.5" />
+          TopLeft="258,343.5" />
         <NodeLayout
           Size="166,42"
           Id="Package\DFT_DimCategories\OLE DB Command"
-          TopLeft="92.5000000000001,311.5" />
+          TopLeft="105.5,270.5" />
         <NodeLayout
           Size="153,42"
           Id="Package\DFT_DimCategories\OLE_Categories"
-          TopLeft="243,5.5" />
+          TopLeft="243,29.5" />
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[Union All Output 1]"
-          TopLeft="319.5,455.5">
+          TopLeft="319.5,385.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,39"
               Start="0,0"
-              End="0,52.5">
+              End="0,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3889,18 +4017,18 @@ FROM [AWP].[dbo].[Products];</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[OLE DB Source Output]"
-          TopLeft="319.5,47.5">
+          TopLeft="318.5,71.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,36"
               Start="0,0"
-              End="0,52.5">
+              End="0,28.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,28.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3911,30 +4039,30 @@ FROM [AWP].[dbo].[Products];</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[OLE DB Command Output]"
-          TopLeft="175.5,353.5">
+          TopLeft="188.5,312.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.166666666667,60"
+              EndConnector="111.166666666667,31"
               Start="0,0"
-              End="125.166666666667,52.5">
+              End="111.166666666667,23.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5301794453507" />
+                    End="0,14.3572593800979" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5301794453507"
-                    Point2="0,35.5301794453507"
-                    Point3="4,35.5301794453507" />
+                    Point1="0,14.3572593800979"
+                    Point2="0,18.3572593800979"
+                    Point3="4,18.3572593800979" />
                   <mssgle:LineSegment
-                    End="121.166666666667,35.5301794453507" />
+                    End="107.166666666667,18.3572593800979" />
                   <mssgle:CubicBezierSegment
-                    Point1="121.166666666667,35.5301794453507"
-                    Point2="125.166666666667,35.5301794453507"
-                    Point3="125.166666666667,39.5301794453507" />
+                    Point1="107.166666666667,18.3572593800979"
+                    Point2="111.166666666667,18.3572593800979"
+                    Point3="111.166666666667,22.3572593800979" />
                   <mssgle:LineSegment
-                    End="125.166666666667,52.5" />
+                    End="111.166666666667,23.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -3945,90 +4073,90 @@ FROM [AWP].[dbo].[Products];</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[New Output]"
-          TopLeft="353,149.5">
+          TopLeft="351,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-14.6666666666667,264"
+              EndConnector="-13.6666666666667,194"
               Start="0,0"
-              End="-14.6666666666667,256.5">
+              End="-13.6666666666667,186.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,127.104705383637" />
+                    End="0,92.3420941076727" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,127.104705383637"
-                    Point2="0,131.104705383637"
-                    Point3="-4,131.104705383637" />
+                    Point1="0,92.3420941076727"
+                    Point2="0,96.3420941076727"
+                    Point3="-4,96.3420941076727" />
                   <mssgle:LineSegment
-                    End="-10.6666666666667,131.104705383637" />
+                    End="-9.66666666666669,96.3420941076727" />
                   <mssgle:CubicBezierSegment
-                    Point1="-10.6666666666667,131.104705383637"
-                    Point2="-14.6666666666667,131.104705383637"
-                    Point3="-14.6666666666667,135.104705383637" />
+                    Point1="-9.66666666666669,96.3420941076727"
+                    Point2="-13.6666666666667,96.3420941076727"
+                    Point3="-13.6666666666667,100.342094107673" />
                   <mssgle:LineSegment
-                    End="-14.6666666666667,256.5" />
+                    End="-13.6666666666667,186.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-34.4247200520833,136.104705383637,54.1827734375,11.43359375"
+              BoundingBox="-33.9247200520833,101.342094107673,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[Historical Attribute Inserts Output]"
-          TopLeft="286,149.5">
+          TopLeft="284,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-104.5,60"
+              EndConnector="-98.5,45"
               Start="0,0"
-              End="-104.5,52.5">
+              End="-98.5,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.2735042735043" />
+                    End="0,14.2051282051282" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
+                    Point1="0,14.2051282051282"
+                    Point2="0,18.2051282051282"
+                    Point3="-4,18.2051282051282" />
                   <mssgle:LineSegment
-                    End="-100.5,24.2735042735043" />
+                    End="-94.5,18.2051282051282" />
                   <mssgle:CubicBezierSegment
-                    Point1="-100.5,24.2735042735043"
-                    Point2="-104.5,24.2735042735043"
-                    Point3="-104.5,28.2735042735043" />
+                    Point1="-94.5,18.2051282051282"
+                    Point2="-98.5,18.2051282051282"
+                    Point3="-98.5,22.2051282051282" />
                   <mssgle:LineSegment
-                    End="-104.5,52.5" />
+                    End="-98.5,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-127.30638671875,29.2735042735043,150.1127734375,11.609375"
+              BoundingBox="-124.30638671875,23.2051282051282,150.1127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[Derived Column Output1]"
-          TopLeft="321.75,557.5">
+          TopLeft="320.75,466.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,44"
               Start="0,0"
-              End="0,52.5">
+              End="0,36.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,36.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4039,18 +4167,18 @@ FROM [AWP].[dbo].[Products];</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\DFT_DimCategories.Paths[Derived Column Output]"
-          TopLeft="178.5,251.5">
+          TopLeft="187,236.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,34"
               Start="0,0"
-              End="0,52.5">
+              End="0,26.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,26.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4059,13 +4187,6 @@ FROM [AWP].[dbo].[Products];</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text=""
-          ParentId="Package\DFT_DimCategories"
-          FontInfo="{assembly:Null}"
-          Size="34,40"
-          Id="3c015e3d-5528-498b-9934-7cf38e015f69"
-          TopLeft="208,340" />
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -4145,7 +4266,7 @@ FROM [AWP].[dbo].[Products];</property>
     design-time-name="Package\DFT_DimCustomers">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="172,42"
           Id="Package\DFT_DimCustomers\OLE_DimCustomers"
@@ -4173,7 +4294,9 @@ FROM [AWP].[dbo].[Products];</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -4631,19 +4754,6 @@ FROM [AWP].[dbo].[Products];</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\DFT_DimTerritories\OLE_Territories">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\DFT_DimCalendar\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
