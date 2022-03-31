@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ClearTables"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{0D8EB840-21A9-45AA-A666-6A38120C6D1B}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{91395834-58D7-4438-AFBC-DCFA48162301}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -48,7 +48,7 @@
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{5056ACC6-5252-4BBA-8ADB-F9761D835BC8}"
-          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[DimCalendar]&#xA;TRUNCATE TABLE [dbo].[DimCategories]&#xA;TRUNCATE TABLE [dbo].[DimCustomers]&#xA;TRUNCATE TABLE [dbo].[DimProducts]&#xA;TRUNCATE TABLE [dbo].[DimProducts]&#xA;TRUNCATE TABLE [dbo].[DimSubcategories]&#xA;TRUNCATE TABLE [dbo].[DimTerritories]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="TRUNCATE TABLE [dbo].[DimCalendar]&#xA;TRUNCATE TABLE [dbo].[DimCategory]&#xA;TRUNCATE TABLE [dbo].[DimCustomer]&#xA;TRUNCATE TABLE [dbo].[DimProduct]&#xA;TRUNCATE TABLE [dbo].[DimSubcategory]&#xA;TRUNCATE TABLE [dbo].[DimTerritory]&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
