@@ -2,6 +2,7 @@
 **AdventureWorks DW Project**
 
 Data flow diagram
+
 <img src="Documentation/img/flow.png">
 
 Load data from flat files to staging DB:<br />
