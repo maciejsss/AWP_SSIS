@@ -18,4 +18,12 @@ AdventureWorks DW Project
 
 <img src="Documentation/img/LoadDimensions.png"><img src="Documentation/img/LoadFacts.png">
 
+<img src="Documentation/img/OLAPdb.png">
+
+<img src="Documentation/img/SalesCube.png">
+
+<img src="Documentation/img/ETLjob.png">
+
+<img src="Documentation/img/ExecutionReport.png">
+
 
