@@ -23,24 +23,27 @@ Sales<br />
 ### Logging inserted rows:<br />
 <img src="Documentation/img/LogsTableStagingDB.png"><br />
 <br />
+Load dimensions and facts tables from staging DB to DW:<br />
+<img src="Documentation/img/LoadDimensions.png"><img src="Documentation/img/LoadFacts.png"><br />
+<br />
 Slowly changing dimesion Categories:<br />
 <img src="Documentation/img/DFT_SCDCategories.png"><br />
 <br />
 Data cleansing in T-SQL:<br />
 <img src="Documentation/img/DataCleansingStagingToDB.png"><br />
 <br />
-Load dimensions and facts tables from staging DB to DW:<br />
-<img src="Documentation/img/LoadDimensions.png"><img src="Documentation/img/LoadFacts.png"><br />
-<br />
+
 ### Data from DW is processed to OLAP database ([AWPOLAP Project](https://github.com/maciejsss/AWPOLAP)):<br />
-<img src="Documentation/img/OLAPdb.png">
+<img src="Documentation/img/OLAPdb.png"><br />
 <br />
 Sales cube:<br />
 <img src="Documentation/img/SalesCube.png"><br />
 <br />
+
 ### All previous stages combined in one SQL job:<br />
 <img src="Documentation/img/ETLjob.png"><br />
 <br />
+
 ### SSIS execution report:<br />
 <img src="Documentation/img/ExecutionReport.png"><br />
 
