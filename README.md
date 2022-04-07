@@ -4,14 +4,14 @@ AdventureWorks DW Project
 Data flow diagram
 <img src="Documentation/img/flow.png">
 
-Load data from flat files to staging DB:
--Products
+Load data from flat files to staging DB:<br />
+-Products<br />
 <img src="Documentation/img/PackageProducts.png"><img src="Documentation/img/DFT_Products.png">
--Customers
+-Customers<br />
 <img src="Documentation/img/PackageCustomers.png"><img src="Documentation/img/DFT_Customers.png">
--Calendar
+-Calendar<br />
 <img src="Documentation/img/PackageCalendar.png"><img src="Documentation/img/DFT_Calendar.png">
--Sales
+-Sales<br />
 <img src="Documentation/img/PackageSales.png"><img src="Documentation/img/DFT_Sales.png">
 
 <img src="Documentation/img/LoadRAWDataToStagingDB.png">
