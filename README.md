@@ -1,5 +1,5 @@
 # AWP
-AdventureWorks DW Project
+**AdventureWorks DW Project**
 
 Data flow diagram
 <img src="Documentation/img/flow.png">
