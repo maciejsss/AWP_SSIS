@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="ClearTables"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{91395834-58D7-4438-AFBC-DCFA48162301}">
+  DTS:VersionBuild="8"
+  DTS:VersionGUID="{B83FBA8B-1D99-4590-BE07-2C5EF6F739A2}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
