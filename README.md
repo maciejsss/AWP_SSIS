@@ -21,7 +21,7 @@ Sales<br />
 <img src="Documentation/img/LoadRAWDataToStagingDB.png"><br />
 <br />
 Logging inserted rows:<br />
-<img src="Documentation/img/SQL_Logging.png"><br />
+<img src="Documentation/img/SQL_logging.png"><br />
 <img src="Documentation/img/SQL_LoggingPara.png"><br />
 <img src="Documentation/img/LogsTableStagingDB.png"><br />
 <br />
