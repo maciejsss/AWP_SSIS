@@ -35,7 +35,7 @@ Data cleansing in T-SQL:<br />
 <img src="Documentation/img/DataCleansingStagingToDB.png" width="700"><br />
 <br />
 
-### Data from DW is processed to OLAP database ([AWPOLAP Project](https://github.com/maciejsss/AWPOLAP)):<br />
+### Data from DW is processed to OLAP database ([AWP_SSAS Project](https://github.com/maciejsss/AWPOLAP)):<br />
 <img src="Documentation/img/OLAPdb.png"><br />
 <br />
 Sales cube:<br />
